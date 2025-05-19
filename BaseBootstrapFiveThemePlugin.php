@@ -46,5 +46,5 @@ class BaseBootstrapFiveThemePlugin extends ThemePlugin {
 }
 
 if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\themes\baseBootstrapFiveTheme\BaseBootstrapFiveThemePlugin', '\B1aseBootstrapFiveThemePlugin');
+    class_alias('\APP\plugins\themes\baseBootstrapFiveTheme\BaseBootstrapFiveThemePlugin', '\BaseBootstrapFiveThemePlugin');
 }
