@@ -1,12 +1,12 @@
 <?php
 
-namespace APP\plugins\themes\baseBootstrapFive;
+namespace APP\plugins\themes\baseBootstrapFiveTheme;
 
 use APP\core\Application;
 use PKP\facades\Locale;
 use PKP\plugins\ThemePlugin;
 
-class BaseBootstrapFivePlugin extends ThemePlugin {
+class BaseBootstrapFiveThemePlugin extends ThemePlugin {
 	public function init() {
 		$request = Application::get()->getRequest();
 		$locale = Locale::getLocale();
