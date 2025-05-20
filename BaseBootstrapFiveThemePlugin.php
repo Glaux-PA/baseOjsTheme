@@ -12,9 +12,7 @@ class BaseBootstrapFiveThemePlugin extends ThemePlugin {
 		$locale = Locale::getLocale();
 		$localeMetadata = Locale::getMetadata($locale);
 
-		//sets default Theme as parent so it inherits it's base styles
-		$this->setParent('defaultthemeplugin');
-
+	
 		// RTL
 		if ($localeMetadata->isRightToLeft()) {
 			$this->addStyle('bootstrap-rtl', 'styles/bootstrap-rtl.min.css');
@@ -22,18 +20,19 @@ class BaseBootstrapFiveThemePlugin extends ThemePlugin {
 
 		// Bootstrap 5 -> To add new styles or templates using BootStrap 5 
 		$this->addStyle('bootstrap5', 'bootstrap/css/bootstrap.min.css');
-		$this->addStyle('custom', 'styles/custom.css');
+		$this->addStyle('styles', 'styles/styles.css');
 		$this->addScript('bootstrap5', 'bootstrap/js/bootstrap.bundle.min.js');
 
-		
+		// Load icon font FontAwesome - http://fontawesome.io/
+        $this->addStyle(
+            'fontAwesome',
+            $request->getBaseUrl() . '/lib/pkp/styles/fontawesome/fontawesome.css',
+            ['baseUrl' => '']
+        );
+
 		$this->addMenuArea(['primary', 'user']);
 
-		//This plugin has no options yet just the inherited, but this would be the method to implement them -> 
-		// $this->addOption('optionName','OptionFieldType',[
-		// 	'label' => __('label in locale'),
-		// 	'description' => __('description in locale'),
-		// 	'default' => 'default value',
-		// ]);
+		
 	}
 
 	function getDisplayName() {
