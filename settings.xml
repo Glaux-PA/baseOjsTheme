@@ -1,11 +1,11 @@
 <!-- 
-  * plugins/themes/baseBootstrapTheme/settings.xml
+  * plugins/themes/baseOjsTheme/settings.xml
   *
   * Copyright (c) 2014-2021 Simon Fraser University
   * Copyright (c) 2003-2021 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
-  * baseBootstrapTheme plugin settings.
+  * baseOjsTheme plugin settings.
   *
    -->
 <plugin_settings>
