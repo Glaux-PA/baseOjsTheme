@@ -1,4 +1,4 @@
-# baseBootstrapFiveTheme
+# baseOjsTheme
 
 Custom theme that inherits default templates with bootstrap 5 packages
 
