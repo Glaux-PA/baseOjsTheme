@@ -1,12 +1,12 @@
 <?php
 
-namespace APP\plugins\themes\baseBootstrapFiveTheme;
+namespace APP\plugins\themes\baseOjsTheme;
 
 use APP\core\Application;
 use PKP\facades\Locale;
 use PKP\plugins\ThemePlugin;
 
-class BaseBootstrapFiveThemePlugin extends ThemePlugin {
+class BaseOjsThemePlugin extends ThemePlugin {
 	public function init() {
 		$request = Application::get()->getRequest();
 		$locale = Locale::getLocale();
@@ -36,14 +36,14 @@ class BaseBootstrapFiveThemePlugin extends ThemePlugin {
 	}
 
 	function getDisplayName() {
-		return __('plugins.themes.baseBootstrapFiveTheme.name');
+		return __('plugins.themes.baseOjsTheme.name');
 	}
 
 	function getDescription() {
-		return __('plugins.themes.baseBootstrapFiveTheme.description');
+		return __('plugins.themes.baseOjsTheme.description');
 	}
 }
 
 if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\themes\baseBootstrapFiveTheme\BaseBootstrapFiveThemePlugin', '\BaseBootstrapFiveThemePlugin');
+    class_alias('\APP\plugins\themes\baseOjsTheme\BaseOjsThemePlugin', '\BaseOjsThemePlugin');
 }

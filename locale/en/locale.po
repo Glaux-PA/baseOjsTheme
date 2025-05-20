@@ -12,8 +12,8 @@ msgstr ""
 "Language: \n"
 
 
-msgid "plugins.themes.baseBootstrapFiveTheme.name"
-msgstr "baseBootstrapFiveTheme Theme"
+msgid "plugins.themes.baseOjsTheme.name"
+msgstr "baseOjsTheme Theme"
 
-msgid "plugins.themes.baseBootstrapFiveTheme.description"
+msgid "plugins.themes.baseOjsTheme.description"
 msgstr "A custom Bootstrap 5 based theme for OJS."

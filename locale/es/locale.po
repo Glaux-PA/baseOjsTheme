@@ -11,8 +11,8 @@ msgstr ""
 "PO-Revision-Date: 2020-02-18T19:18:25+00:00\n"
 "Language: \n"
 
-msgid "plugins.themes.baseBootstrapFiveTheme.name"
-msgstr "Tema Base baseBootstrapFiveTheme"
+msgid "plugins.themes.baseOjsTheme.name"
+msgstr "Tema Base baseOjsTheme"
 
-msgid "plugins.themes.baseBootstrapFiveTheme.description"
-msgstr "Un tema de inicio de baseBootstrapFiveTheme"
+msgid "plugins.themes.baseOjsTheme.description"
+msgstr "Un tema de inicio de baseOjsTheme"
