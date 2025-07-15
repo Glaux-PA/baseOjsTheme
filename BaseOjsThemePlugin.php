@@ -31,6 +31,7 @@ class BaseOjsThemePlugin extends ThemePlugin {
         );
 
 		$this->addMenuArea(['primary', 'user']);
+		
 		$this->addScript('html_view', 'js/html_view.js');
 		$this->addScript('script', 'js/script.js');
 	}
