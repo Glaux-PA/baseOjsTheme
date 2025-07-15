@@ -19,9 +19,9 @@ class BaseOjsThemePlugin extends ThemePlugin {
 		}
 
 		// Bootstrap 5 -> To add new styles or templates using BootStrap 5 
-		$this->addStyle('bootstrap5', 'bootstrap/css/bootstrap.min.css');
+		$this->addStyle('bootstrap5', 'dependencies/bootstrap/css/bootstrap.min.css');
 		$this->addStyle('styles', 'styles/styles.css');
-		$this->addScript('bootstrap5', 'bootstrap/js/bootstrap.bundle.min.js');
+		$this->addScript('bootstrap5', 'dependencies/bootstrap/js/bootstrap.bundle.min.js');
 
 		// Load icon font FontAwesome - http://fontawesome.io/
         $this->addStyle(
@@ -32,7 +32,8 @@ class BaseOjsThemePlugin extends ThemePlugin {
 
 		$this->addMenuArea(['primary', 'user']);
 
-		
+		$this->addScript('html_view', 'js/html_view.js');
+		$this->addScript('script', 'js/script.js');
 	}
 
 	function getDisplayName() {
