@@ -1,0 +1,482 @@
+
+body  {
+    font-family: 'Source Serif 4', serif;
+    box-sizing: border-box;
+    color: black;
+    line-height: 1.3em;
+    margin: 0 !important;
+    padding-right: 50px;
+    font-size: 1.25rem;
+
+    a {
+        color:  #2d80af;
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .5;
+        }
+    }
+
+    h1.h1 {
+        font-size: 2rem;
+        font-weight: 700 !important;
+        letter-spacing: -.5px;
+    }
+
+    h2.h2,
+    h3.h3,
+    h2.sec5,
+    h2.sec6 {
+        font-weight: 600 !important;
+    }
+
+    h1.h1,
+    h2.h2,
+    h3.h3,
+    .sec5,
+    .sec6,
+    .name,
+    .aff,
+    .orcid,
+    li.num,
+    li.bullet  {
+        font-family: 'Source Serif 4', serif;
+    }
+
+    .titleabstract {
+        font-weight: 700;
+    }
+
+    .tit-fig,
+    .tit-table,
+    .tabtext,
+    .source,
+    .tabtextc {
+        font-family: 'Source Sans 3', sans-serif;
+        font-style: normal;
+    }
+
+    p {
+        font-size: 1.25rem !important;
+    }
+
+    li.bullet,
+    li.num  {
+        font-size: 1.25rem;
+    }
+
+    p.noindenta, p.indent, p.noindent{
+        margin: 1rem 0 0 0;
+    }
+
+    p.disp-quote{
+        margin: 1rem 4rem;
+    }
+
+    table img{
+        width: 150px !important;
+    }
+
+    .bull,
+    .bull1,
+    .alpha,
+    .num,
+    .num1 {
+        padding-left: 1.6rem;
+        margin: 0 0 0.5rem 1.5rem;
+    }
+
+    .alpha,
+    .num {
+        text-indent: -1.1rem;
+    }
+
+    .num1,
+    .bull {
+        text-indent: -.7rem;
+    }
+
+    .bull1{
+        text-indent: 0.5em;
+    }
+
+    .bull2{
+        margin: 0 0 0.5rem 4rem;
+    }
+
+    .bull3{
+        margin: 0 0 0.5rem 6rem;
+    }
+
+    .h3 {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .h4,
+    .h4a {
+        font-size: 1.4rem;
+        margin: 1.5rem 0 0.8rem 0;
+    }
+
+    .h5 {
+        font-size: 1.2rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 1.4rem;
+    }
+
+    ul li {
+        position: relative;
+        margin-bottom: .6rem;
+        line-height: 1.6
+    }
+
+    ul li:before {
+        content: "";
+        position: absolute;
+        left: -1.4rem;
+        top: .5rem;
+        width: .8rem;
+        height: .8rem;
+        background: #2d80af;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    p.noindenta {
+        margin-bottom: 0;
+    }
+
+    p.noindenta1 {
+        margin-top: 0
+    }
+
+    p a[href*="#ref"]:target{
+        background: #0F5DA3;
+        color: black;
+        font-weight: bold;
+    }
+
+    .noindentac {
+        font-weight: 100;
+        font-size: 1.2rem;
+        line-height: 1;
+        letter-spacing: .2rem;
+        color: #0F5DA3;
+        border-bottom: 1px solid #f6f6f6;
+        padding-bottom: 1rem;
+        margin: 0;
+    }
+
+    .noindentac {
+        margin-top: 2rem;
+    }
+
+    figure,
+    table-wrap {
+        margin: 1.5rem 0;
+        padding: 1rem;
+        border-top: solid 1px #0F5DA3;
+        border-bottom: solid 1px #0F5DA3;
+    }
+
+    figure figcaption {
+        margin: 0 0 1rem 0;
+        font-style: italic;
+        font-weight: 400;
+        color: black;
+    }
+
+    figure .imagef{
+        text-align: center;
+    }
+
+    .source {
+        font-size: .85rem;
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+
+        @media all and (min-width: 600px){
+            max-width: 400px;
+        }
+
+        @media all and (min-width: 1000px){
+            max-width: 600px;
+        }
+    }
+
+    figure img.logo {
+        width: unset;
+    }
+
+    /* referencias */
+
+    .bib {
+        position: relative;
+        padding-left: 1rem;
+        line-height: 1.2;
+        margin: 0 0 1rem 0;
+        text-indent: 0;
+    }
+
+    .bib:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background: #2d80af;
+        left: 0;
+        top: .7rem;
+    }
+
+    .bib:target {
+        background: #f6f6f6;
+        padding: 1rem;
+        transform: all 500ms;
+
+    }
+
+    .bib:target:before {
+        top: 1.7rem
+    }
+
+    /* notas a pe de páxina */
+
+    p.footnote {
+        margin-left: 1.8rem
+    }
+
+    p.footnote a[href^="#rfn"] {
+        display: inline-flex;
+        width: 1.2rem;
+        place-content: center;
+        position: relative;
+        font-size: .8rem;
+        border-radius: 10%;
+        background: #f6f6f6;
+        color: #2d80af;
+        margin-right: .4rem;
+        margin-left: -1.8rem;
+    }
+
+    p.footnote>a:target {
+        background: #0F5DA3;
+        color: black;
+        font-weight: bold;
+    }
+
+    sup a {
+        margin-left: .2rem;
+    }
+
+    p.footnote>a:hover::before {
+        position: absolute;
+        display: flex;
+        place-content: center;
+        width: 50px;
+        top: -1.4rem;
+        background: #f6f6f6;
+        font-weight: 100;
+        color: black;
+        text-decoration: none;
+    }
+
+    sup a:before {
+        content: "[";
+    }
+
+    sup a:after {
+        content: "]";
+    }
+
+    sup a:target {
+        font-weight: bold;
+        background: #f6f6f6;
+        color: #0F5DA3;
+    }
+
+    .footnote1, .footnote{
+        sup a:before {
+            content: "";
+        }
+
+        sup a:after {
+            content: "";
+        }
+    }
+
+    /*
+    TABOAS */
+
+    #tabw-2-PP24 thead tr:last-of-type {
+        writing-mode: sideways-rl;
+    }
+
+    #tabw-2-PP24 table tr>td:nth-of-type(2) {
+        width: 20%;
+    }
+
+    div.table {
+        overflow: auto;
+        scroll-snap-type: both mandatory;
+        max-width: 42rem;
+        margin: 1.5rem auto;
+        font-size: medium;
+    }
+
+    > table{
+        overflow: auto;
+        scroll-snap-type: both mandatory;
+        max-width: 42rem;
+        margin: 2rem auto 0 auto;
+        font-size: medium;
+    }
+
+    > p.tabcaption{
+        margin: 0 3rem 2rem 3rem;
+        font-size: medium;
+    }
+
+    .table .tabcap, .table .tabcaption{
+        margin: 0 3rem 1rem 3rem;
+        font-size: medium;
+    }
+
+    > p.source{
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    table p {
+        font-size: .8rem;
+        text-align: left;
+        word-break: normal
+    }
+
+    table {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+        table-layout: fixed;
+        line-height: 1.2;
+    }
+
+    thead tr {
+        background-color: #f6f6f6;
+        color: black;
+    }
+
+    table p {
+        margin: 0;
+    }
+
+    table caption {
+        font-size: 1.5rem;
+        margin: .2rem 0 .2rem;
+    }
+
+    tbody tr {
+        border: 1px solid #ddd;
+    }
+
+    table th,
+    table td {
+        vertical-align: top;
+    }
+
+    table th {
+        text-transform: uppercase;
+    }
+
+    table caption {
+        margin: .5em 0 .75em;
+    }
+
+    tbody tr {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: .35em;
+    }
+
+    table th,
+    table td {
+        padding: .625em;
+        text-align: center;
+    }
+
+    table th {
+        font-size: .85em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+    table td {
+        overflow-x: clip;
+    }
+
+    /* BOTÓNS DESCARGAR / AGRANDAR */
+
+    .htmlViewerButtonsCont{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        .button_view:hover,
+        .button_download:hover {
+            cursor: pointer;
+            background-color: #0F5DA3;
+        }
+
+        .button_view,
+        .button_download{
+            padding: 0.2rem;
+            font-size: 0.9rem;
+            color: white;
+            background-color: #0F5DA3;
+            border-radius: 3px;
+        }
+    }
+
+
+    .h2 {
+        line-height: 1.2em;
+    }
+
+    .h2a {
+        line-height: 1.2em;
+    }
+
+    .indentt {
+        line-height: 1.2em;
+    }
+
+    .h2b1 {
+        color: black;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+.pkp_block {
+	.title {
+		font-size: $font-size-lg;
+		margin-top: $spacer * 2;
+		font-weight: $font-weight-bold;
+	}
+
+	ul {
+		@include list-unstyled();
+	}
+}

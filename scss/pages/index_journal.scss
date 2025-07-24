@@ -1,0 +1,51 @@
+.page_index_journal {
+	padding-bottom: $spacer * 4;
+	background: $gray-bg;
+
+	.heading {
+		.heading_articles_wrapper_G {
+			padding-top: $spacer * 4;
+
+	  		.title {
+	  			font-size: $h3-font-size;
+				font-weight: $font-weight-semibold;
+	  		}
+		}
+	}
+
+	.sections {
+		margin-top: $spacer;
+
+		.section {
+			margin-top: 0;
+		}
+	}
+
+	.btn-wrapper {
+		text-align: center;
+		margin-top: $spacer * 2;
+	}
+}
+
+
+/* Axustes páxina body */
+
+.pkp_page_index {
+	.pkp_structure_head {
+		&.is-desktop {
+			background: $gray-bg;
+		}
+
+		.site_name_wrapper_G {
+			.pkp_site_name {
+				width: 100%;
+
+				.logo {
+					@include media-breakpoint-up(md) {
+						width: 400px;
+					}
+				}
+			}
+		}
+	}
+}

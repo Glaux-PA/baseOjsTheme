@@ -1,0 +1,16 @@
+.page_about {
+	.aboutToc {
+		@include list-unstyled();
+
+		li {
+			color: $primary;
+			cursor: pointer;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $primary-dark;
+			}
+		}
+	}
+}

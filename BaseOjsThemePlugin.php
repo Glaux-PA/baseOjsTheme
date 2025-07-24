@@ -20,7 +20,7 @@ class BaseOjsThemePlugin extends ThemePlugin {
 
 		// Bootstrap 5 -> To add new styles or templates using BootStrap 5 
 		$this->addStyle('bootstrap5', 'dependencies/bootstrap/css/bootstrap.min.css');
-		$this->addStyle('styles', 'styles/styles.css');
+		$this->addStyle('styles', 'css/index.css');
 		$this->addScript('bootstrap5', 'dependencies/bootstrap/js/bootstrap.bundle.min.js');
 
 		// Load icon font FontAwesome - http://fontawesome.io/

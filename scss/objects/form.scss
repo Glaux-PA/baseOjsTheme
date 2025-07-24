@@ -1,0 +1,63 @@
+.form_wrapper_G {
+	width: 100%;
+	margin: 0 auto;
+
+	@include media-breakpoint-up(md) {
+		width: 40%;
+	}
+}
+
+.cmp_form{
+	.fields {
+
+	}
+
+	.input_group_G {
+		margin-bottom: $spacer; 
+	}
+
+	.form-label {
+		font-weight: $font-weight-semibold;
+	}
+
+	.form-control {
+		background: $white;
+		border-radius: 5px;
+	}
+
+	.buttons {
+		margin-top: $spacer; 
+	}
+
+	.legend_G {
+		font-size: $font-size-md;
+		font-weight: $font-weight-semibold;
+	}
+
+	.search_advanced {
+		margin-top: $spacer;
+
+		.date_range {
+			fieldset {
+				margin-bottom: $spacer;
+			}
+
+			legend {
+				font-weight: $font-weight-semibold;
+				font-size: $font-size-base;	
+			}
+
+			.form-select {
+				display: inline-block;
+				width: 20%;
+				margin-right: $spacer / 2; 
+			}
+
+			.form-label {
+				font-weight: $font-weight-normal;
+				font-size: $font-size-sm;
+				margin-right: $spacer / 2; 
+			}
+		}
+	}
+}

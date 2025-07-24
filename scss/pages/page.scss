@@ -1,0 +1,13 @@
+.page {
+  padding-bottom: $spacer * 4;
+}
+
+.page_announcements,
+.page_announcement,
+.page_privacy,
+.page_about,
+.page_contact,
+.page_submissions,
+.page_article {
+  background: $white;
+}

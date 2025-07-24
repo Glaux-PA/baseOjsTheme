@@ -1,0 +1,67 @@
+.page_person {
+
+	.person-info {
+			.person-name {
+					font-size: $h1-font-size;
+					line-height: $line-height-lg;
+					font-weight: $font-weight-semibold;
+			}
+	}
+
+	.person-profile-wrapper {
+			margin-top: $spacer * 2;
+			padding: $spacer;
+			border: 1px solid $primary;
+			margin-bottom: $spacer;
+	}
+
+	.person-articles-wrapper {
+			margin-top: $spacer * 3;
+
+			.title-articles-list {
+					border-bottom: 1px solid $border-color;
+					padding-bottom: $spacer / 2;
+					margin-bottom: 0;
+					font-weight: $font-weight-semibold;
+			}
+
+			.articles-list {
+					> li {
+							margin-bottom: $spacer;
+							border-top: 1px dashed $border-color;
+							padding-top: $spacer;
+
+							&:first-child {
+									border-top: 0;
+							}
+					}
+
+					.title {
+							font-size: $spacer;
+							line-height: $line-height-lg;
+							font-weight: $font-weight-semibold;
+							margin: 0;
+
+							a {
+									color: black;
+									text-decoration: none;
+
+									&:hover {
+											text-decoration: underline;
+											color: $primary;
+									}
+							}
+					}
+
+					.issue,
+					.date {
+							margin-top: 0;
+							margin-bottom: 0;
+							font-size: $small-font-size;
+							color: $primary-light;
+					}
+			}
+	}
+}
+
+

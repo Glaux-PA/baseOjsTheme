@@ -1,0 +1,23 @@
+.page_register {
+	background: $gray-bg;
+	padding-bottom: $spacer * 4;
+
+	.contexts {
+		@include list-unstyled();
+	}
+
+	.btn-link {
+		margin-left: $spacer / 2;
+	}
+}
+
+
+/* Axustes páxina coa clase do body */
+
+.pkp_page_user {
+	.pkp_structure_head {
+		&.is-desktop {
+			background: $gray-bg;
+		}
+	}
+}

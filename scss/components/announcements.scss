@@ -1,0 +1,13 @@
+.cmp_announcements {
+	@include list-unstyled();
+
+	&.highlight_first {
+		margin-bottom: $spacer * 3;
+	}
+}
+
+
+
+
+
+
