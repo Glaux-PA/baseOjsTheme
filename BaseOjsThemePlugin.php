@@ -29,6 +29,7 @@ class BaseOjsThemePlugin extends ThemePlugin {
             $request->getBaseUrl() . '/lib/pkp/styles/fontawesome/fontawesome.css',
             ['baseUrl' => '']
         );
+		
 
 		$this->addMenuArea(['primary', 'user']);
 		$this->addScript('html_view', 'js/html_view.js');
