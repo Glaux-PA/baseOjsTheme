@@ -38,6 +38,7 @@ class BaseOjsThemePlugin extends ThemePlugin {
 	function getDisplayName() {
 		return __('plugins.themes.baseOjsTheme.name');
 	}
+	
 
 	function getDescription() {
 		return __('plugins.themes.baseOjsTheme.description');
