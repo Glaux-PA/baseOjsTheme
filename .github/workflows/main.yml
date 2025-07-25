@@ -14,4 +14,4 @@ jobs:
           server: icono14pruebas.glaux.es
           username: icono14pruebasglaux
           password: ${{ secrets.ftp_password }}
-          server-dir: www/plugins/themes/baseOjsTheme
+          server-dir: www/plugins/themes/baseOjsTheme/
