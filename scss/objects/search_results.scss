@@ -1,8 +1,0 @@
-.search_results {
-	@include list-unstyled();
-	margin-top: $spacer * 3;
-
-	> li {
-		margin-bottom: $spacer * 2;
-	}
-}

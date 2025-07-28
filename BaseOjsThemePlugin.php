@@ -12,24 +12,52 @@ class BaseOjsThemePlugin extends ThemePlugin {
 		$locale = Locale::getLocale();
 		$localeMetadata = Locale::getMetadata($locale);
 
-	
-		// RTL
-		if ($localeMetadata->isRightToLeft()) {
-			$this->addStyle('bootstrap-rtl', 'styles/bootstrap-rtl.min.css');
-		}
-
-		// Bootstrap 5 -> To add new styles or templates using BootStrap 5 
-		$this->addStyle('bootstrap5', 'dependencies/bootstrap/css/bootstrap.min.css');
 		$this->addStyle('styles', 'css/index.css');
-		$this->addScript('bootstrap5', 'dependencies/bootstrap/js/bootstrap.bundle.min.js');
+
+		//Google Fonts
+		$this->addStyle(
+			'googleFontsSourceSans',
+			'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
+			array('baseUrl' => '')
+		);
+
+		// BootsrapIcons
+		$this->addScript('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css');
+
 
 		// Load icon font FontAwesome - http://fontawesome.io/
         $this->addStyle(
             'fontAwesome',
             $request->getBaseUrl() . '/lib/pkp/styles/fontawesome/fontawesome.css',
-            ['baseUrl' => '']
         );
-		
+
+		//Load js
+		$this->addScript(
+			'jQuery',
+			'https://code.jquery.com/jquery-3.7.1.min.js',
+				array('baseUrl' => ''),
+		);
+
+		$this->addOption('displayStats', 'FieldOptions', [
+			'type' => 'radio',
+			'label' => __('plugins.themes.default.option.displayStats.label'),
+			'options' => [
+				[
+					'value' => 'none',
+					'label' => __('plugins.themes.default.option.displayStats.none'),
+				],
+				[
+					'value' => 'bar',
+					'label' => __('plugins.themes.default.option.displayStats.bar'),
+				],
+				[
+					'value' => 'line',
+					'label' => __('plugins.themes.default.option.displayStats.line'),
+				],
+			],
+			'default' => 'none',
+		]);
+
 		$this->addMenuArea(['primary', 'user']);
 		$this->addScript('html_view', 'js/html_view.js');
 		$this->addScript('script', 'js/script.js');
