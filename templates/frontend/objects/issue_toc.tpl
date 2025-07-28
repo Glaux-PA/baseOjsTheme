@@ -95,7 +95,7 @@
 		{/if}
 
 		{* Published date *}
-		{if $includeIssuePublishDate && $issue->getDatePublished()}
+		{if $issue->getDatePublished()}
 			<div class="published">
 				<span class="label">
 					{translate key="submissions.published"}:

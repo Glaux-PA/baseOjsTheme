@@ -15,8 +15,6 @@
  * @uses $hideGalleys bool Hide the article galleys for this article?
  * @uses $primaryGenreIds array List of file genre ids for primary file types
  * @uses $heading string HTML heading element, default: h2
- *
- * @hook Templates::Issue::Issue::Article []
  *}
 {assign var=publication value=$article->getCurrentPublication()}
 
@@ -25,7 +23,7 @@
 	{assign var="heading" value="h2"}
 {/if}
 
-{if (!$section.hideAuthor && $publication->getData('hideAuthor') == APP\submission\Submission::AUTHOR_TOC_DEFAULT) || $publication->getData('hideAuthor') == APP\submission\Submission::AUTHOR_TOC_SHOW}
+{if (!$section.hideAuthor && $publication->getData('hideAuthor') == \APP\submission\Submission::AUTHOR_TOC_DEFAULT) || $publication->getData('hideAuthor') == \APP\submission\Submission::AUTHOR_TOC_SHOW}
 	{assign var="showAuthor" value=true}
 {/if}
 
@@ -85,16 +83,16 @@
 
 	{if !$hideGalleys}
 		<ul class="galleys_links">
-			{foreach from=$publication->getData('galleys') item=galley}
+			{foreach from=$article->getGalleys() item=galley}
 				{if $primaryGenreIds}
 					{assign var="file" value=$galley->getFile()}
-					{if !$galley->getData('urlRemote') && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
+					{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
 						{continue}
 					{/if}
 				{/if}
 				<li>
 					{assign var="hasArticleAccess" value=$hasAccess}
-					{if $currentContext->getSetting('publishingMode') == APP\journal\Journal::PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == APP\submission\Submission::ARTICLE_ACCESS_OPEN}
+					{if $currentContext->getSetting('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN}
 						{assign var="hasArticleAccess" value=1}
 					{/if}
 					{assign var="id" value="article-{$article->getId()}-galley-{$galley->getId()}"}
