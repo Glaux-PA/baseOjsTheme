@@ -1,0 +1,25 @@
+.page_login {
+	.inner_wrapper_bg {
+		background:url(../img/waves_bg.svg) repeat-x;
+		background-color: $gray-bg;
+		background-size: 500px;
+		background-position: center;
+		padding-top: $spacer * 4;
+		padding-bottom: $spacer * 4;
+	}
+
+	.btn-link {
+		margin-left: $spacer / 2;
+	}
+
+	.form_wrapper_G {
+		padding: $spacer * 2;
+		background: $white;
+		box-shadow: 0px 0px 40px 0px $gray-bg-dark;
+		border-radius: $border-radius;
+	}
+}
+
+.page.page_login {
+	padding-bottom: 0;
+}

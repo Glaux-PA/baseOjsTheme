@@ -1,0 +1,85 @@
+.page_people-list {
+	.people_list_wrapper {
+			margin-top: $spacer * 2;
+			text-align: center;
+
+			.btn-nav-list {
+
+				li {
+					display: inline-block;
+					margin-bottom: $spacer / 2;
+
+					a {
+						display: inline-block;
+						padding: .75rem .8rem;
+						border: 2px solid $primary;
+						text-decoration: none;
+						width: 45px;
+						text-align: center;
+						border-radius: 3px;
+						font-size: .9rem;
+
+						&:hover {
+								background:$secondary;
+						}
+
+					}
+
+					.btn-all {
+							width: auto;
+					}
+
+					&.select {
+							a {
+								background: $primary;
+								color: white;
+							}
+					}
+				}
+			}
+
+			.btn-authors-first-letter {
+				li.select {
+
+				}
+			}
+
+			.index-wrapper {
+				.letter-block-list-wrapper {
+					margin-top: $spacer * 3;
+
+					.letter {
+							font-size: $h1-font-size;
+							color: $primary;
+							font-weight: $font-weight-bold;
+					}
+
+				.letter-block-list {
+					list-style-type: none;
+						.person-name {
+							font-size: $font-size-base;
+							line-height: $line-height-lg;
+							font-weight: $font-weight-semibold;
+							margin-bottom: 0;
+
+							a {
+									color: black;
+									text-decoration: none;
+
+									&:hover {
+											text-decoration: underline;
+									}
+							}
+						}
+
+					.person-affiliation {
+							margin-top: 0;
+							margin-bottom: 0;
+							color: $primary-light;
+					}
+				}
+			}
+		}
+	}
+}
+

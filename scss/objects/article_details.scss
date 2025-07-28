@@ -1,0 +1,267 @@
+.obj_article_details {
+	.has_bg {
+  		@include media-breakpoint-up(lg) {
+			background:url(../img/corchete.svg) no-repeat;
+			background-size: auto 200px;
+	  		background-position: 0rem  $spacer;
+	  		padding-left: $spacer * 5;
+
+  		}
+	}
+
+	.header_article_wrapper_G {
+		margin-bottom: $spacer * 3;
+	}
+
+	.page_title {
+		font-size: $h2-font-size;
+		line-height: $line-height-xs;
+		font-weight: $font-weight-semibold;
+
+		 @include media-breakpoint-up(sm) {
+			font-size: $font-size-extra;
+		 }
+	}
+
+	.subtitle {
+		font-family: $font-family-sans-serif;
+		margin-bottom: $spacer * 3;
+		font-size: $h5-font-size;
+	}
+
+	.share_block_wrapper_G {
+		padding-bottom: $spacer;
+
+		.share_block {
+			text-align: right;
+		}
+	}
+
+	.info-issue-wrapper {
+		margin-top: $spacer * 2;
+	}
+
+	.main_entry {
+		padding-bottom: $spacer;
+	}
+
+	.item {
+		margin-top:$spacer;
+		
+		.label {
+			font-size: $font-size-base;
+			font-weight: $font-weight-semibold;
+		}
+
+		.sub_item {
+			+ .sub_item {
+				margin-top: $spacer * 2;
+			}
+
+			.label {
+				font-weight: $font-weight-semibold;
+				font-size: $font-size-base;
+				font-family: $font-family-sans-serif;
+			} 
+		}
+	}
+
+	.issue {
+		font-size: $font-size-md;
+		line-height: $line-height-sm;
+		text-transform: uppercase;
+		margin-bottom: $spacer;
+		padding-bottom: 0;
+		font-weight: $font-weight-semibold;
+	}
+
+	.doi, 
+	.published,
+	.authors {
+		margin-top: 0;
+		padding-bottom: 0;
+		
+		.label {
+			display: inline-block;
+		}
+	}
+
+	.abstract,
+	.references {
+		.label {
+			font-size: $font-size-lg;
+			text-transform: uppercase;
+		}
+	}
+
+	.doi {
+		margin-left: $spacer / 2;
+	}
+
+	.supporting_agency {
+		ul {
+			@include list-unstyled();
+		}
+	}
+
+	.copyright {
+		padding: $spacer;
+		background: $gray-bg;
+
+		img {
+			margin-top: $spacer;
+			margin-bottom: $spacer;
+		}
+	}
+
+	.cover_image {
+		margin-top: $spacer;
+	}
+
+	.galleys {
+		margin-top: $spacer;
+		padding-bottom: 0;
+		margin-bottom: 0;
+
+
+		.galleys_links {
+			> li {
+				.obj_galley_link {
+					font-size: $font-size-sm-alt;
+					background-color: $primary;
+					color: $white;
+					border: 1px solid $primary;
+					padding:$spacer / 4 $spacer / 2;
+					border-radius: 4px;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: $white;
+						background: $primary-dark;
+						border-bottom: 1px solid $primary-dark;
+					}
+				}
+			}
+		}
+	}
+
+	.authors,
+	.authors_list {
+		.label {
+			display: inline-block;
+		}
+
+		.btn-link {
+			margin-bottom: $spacer;
+		}
+
+		ul.authors {
+			@include list-unstyled();
+			margin-bottom: 0;
+			margin-right: $spacer / 2;
+
+			li {
+				display: inline-block;
+
+				.name {
+					font-weight: $font-weight-semibold;
+					margin-bottom: $spacer / 2;
+				}
+
+				.affiliation {
+					margin-bottom: $spacer / 2;
+				}
+
+				.orcid {
+					padding-left: $spacer * 2;
+					background: url(../img/logo_orcid.svg) no-repeat;
+					background-size: 22px;
+					padding-left: $spacer * 2;
+					display: block;
+					margin-bottom: $spacer / 2;
+				}
+			}
+		}
+	}
+
+	.citation {
+		.citation_display {
+			> .label {
+				font-size: $font-size-lg;
+				text-transform: uppercase;
+			}
+
+			.citation_formats {
+				margin-top: $spacer * 2;
+
+				.citation_formats_button {
+					background: $white;
+					border: 1px solid $black;
+					padding: $spacer / 2  $spacer;
+					position: relative;
+
+					.bi {
+						padding-left: $spacer * 2;
+						position: absolute;
+						right: 2rem;
+					}
+
+					&::after {
+						display: none !important;
+					}
+				}
+
+				.citation_formats_list {
+					padding: $spacer;
+
+					.citation_formats_styles {
+						@include list-unstyled();
+
+						li {
+							a {
+								color: $black;
+								font-size: $font-size-base;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.item.downloads_chart {
+		.label {
+			margin-bottom: $spacer * 3;
+		}
+	}
+
+	.item.references {
+		height: 400px;
+		overflow: scroll;
+		padding-right: $spacer * 2;
+	}
+}
+
+
+
+// poner clase si se puede
+#articlesBySameAuthorList {
+	margin-top: $spacer * 2;
+	
+	h3 {
+		font-size: $font-size-lg;
+		font-weight: $font-weight-medium;
+	}
+
+	ul {
+		@include list-unstyled();
+	}
+}
+
+
+
+
+
+
+

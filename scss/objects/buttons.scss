@@ -1,0 +1,55 @@
+.btn {
+	display: inline-block;
+	background-color: $primary;
+	border: 1px solid $primary;
+	border-radius: 6px;
+	color: $white;
+	padding: $spacer / 2 $spacer * 2;
+	text-decoration: none;
+	font-weight: $font-weight-medium;
+	text-align: center;
+	cursor: pointer;
+	font-size: $font-size-base;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: $primary-dark;
+		border: 1px solid $primary-dark;
+		color: $white;
+	}
+}
+
+.btn-link {
+	display: inline-block;
+	color: $primary;
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: $font-size-base;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $primary-dark;
+	}
+}
+
+.btn-alt {
+	background-color: $white;
+	border: 1px solid $primary;
+	color: $primary;
+	
+	&:hover,
+	&:focus,
+	&:active {
+		background: $primary;
+		border: 1px solid $primary;
+		color: $white;
+	}
+}
+
+
+.btn_wrapper {
+	margin-top: $spacer;
+	margin-bottom: $spacer;
+}

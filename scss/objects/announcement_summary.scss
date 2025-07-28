@@ -1,0 +1,56 @@
+.obj_announcement_summary {
+	margin-top: $spacer;
+	padding-top: $spacer;
+	box-shadow: 0px 0px 40px 0px $gray-bg;
+	border-radius: $border-radius;
+	border: 1px solid $border-color;
+	padding: $spacer * 2;
+
+	.title {
+		font-size: $font-size-lg;	
+
+		a {
+			text-decoration: none;
+			color: $black;
+
+			&:hover,
+			&:focus,
+			&:active {
+				opacity: .5;
+			}
+		}
+	}
+
+	.date {
+		font-family: $font-family-sans-serif;
+		font-size: $font-size-sm;
+		line-height: $line-height-sm;
+	}	
+
+	.summary {
+		margin-top: $spacer;
+	}
+
+	.btn.btn-link {
+		padding: 0;
+	}
+
+
+	.arrow-wrapper {
+		display: flex;
+		justify-content: end;
+
+		.arrow-link {
+			background:url(../img/arrow.svg) no-repeat;
+			width: 55px;
+			height: 45px;
+			display: block;
+		}
+	}
+}
+
+
+
+
+
+

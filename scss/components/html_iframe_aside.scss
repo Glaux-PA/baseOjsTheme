@@ -1,0 +1,22 @@
+@include media-breakpoint-up(md) {
+    .article_sidebar {
+        height: 100%;
+    }
+
+    #sidebar_toc {
+        position: sticky;
+        top: 50px;
+        background: $white;
+        padding: $spacer;
+
+        ul {
+            li {
+                a.actual {
+                    font-weight: 600;
+                    color: black;
+
+                }
+            }
+        }
+    }
+}

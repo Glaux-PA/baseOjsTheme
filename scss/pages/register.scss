@@ -1,0 +1,56 @@
+.page_register, 
+.page_register_complete,
+.page_lost_password {
+	.inner_wrapper_bg {
+		background:url(../img/waves_bg.svg) repeat-x;
+		background-color: $gray-bg;
+		background-size: 500px;
+		background-position: 200px;
+		padding-top: $spacer * 4;
+		padding-bottom: $spacer * 4;
+	}
+
+	.contexts {
+		@include list-unstyled();
+	}
+
+
+	.form_wrapper_G {
+		padding: $spacer * 2;
+		background: $white;
+		box-shadow: 0px 0px 40px 0px $gray-bg-dark;
+		border-radius: $border-radius;
+	}
+	
+
+	.btn-link {
+		margin-left: $spacer / 2;
+	}
+
+	#connect-orcid-button {
+		display: block;
+		background-color: $primary;
+		border-color: $primary;
+		border-radius: 6px;
+		color: $white;
+		padding: $spacer / 2 $spacer * 2;
+		text-decoration: none;
+		font-weight: $font-weight-medium;
+		text-align: center;
+		cursor: pointer;
+		font-size: $font-size-base;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background: $primary-dark;
+			color: $white;
+		}
+	}
+}
+
+.page.page_register,
+.page.page_register_complete,
+.page.page_lost_password  {
+	padding-bottom: 0;
+}

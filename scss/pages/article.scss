@@ -1,0 +1,72 @@
+.pkp_page_article {	
+	.aside_G {
+		margin-top: $spacer * 3;
+
+		.btn {
+			margin-bottom: $spacer;
+			margin-top: $spacer * 2;
+			cursor: pointer;
+		}
+	}
+}
+
+.page_article {
+	.header_article_wrapper_G {
+		padding-top: $spacer * 2;
+		padding-bottom: $spacer * 2;
+		background: $gray-bg;
+	}
+
+	&.is-dark {
+		.header_article_wrapper_G {
+			padding-top: $spacer * 2;
+			padding-bottom: $spacer * 2;
+			color: $white;
+			background: $gray-dark;
+
+			a {
+				color: $white;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $primary-light;
+				}
+			}
+
+			.page_title,
+			.subtitle {
+				color: $white;
+			}
+
+			.item {				
+				.label {
+					color: $white;
+				}
+			}
+
+			.info-issue-wrapper {
+				.title-issue {
+					color: $white;
+				}
+			}
+
+			
+			.share_block .share-list li a {
+				color: $white;
+
+				i {
+					border: 1px solid $white;
+				}
+			}
+
+			.has_bg {
+				background:url(../img/corchete.svg) no-repeat;
+				background-size: auto 200px;
+	  			background-position: 0rem  $spacer;
+	  			padding-left: $spacer * 5;
+			}
+
+		}
+	}
+}

@@ -1,0 +1,104 @@
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: $primary;
+  padding-top: $spacer * 3;
+  padding-bottom: $spacer * 3;
+  margin-top: $spacer * 4;
+
+.slider-title {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+  color: $white;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  margin-left: 0; /* Eliminamos cualquier desplazamiento no deseado */
+}
+
+.slide {
+  flex: 0 0 33.33%; /* 3 elementos por defecto */
+  padding: 15px;
+  box-sizing: border-box;
+  min-width: 0; /* Evita desbordamientos */
+}
+
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $white;
+  border: 1px solid $white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-prev {
+  left: 0;
+}
+
+.slider-next {
+  right: 0;
+}
+
+.slider-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+}
+
+/* Estilos originales */
+.obj_issue_summary {
+  width: 100%;
+}
+
+.obj_issue_summary .cover img {
+  width: 100%;
+  height: auto;
+}
+
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .slider-wrapper .slide {
+    flex: 0 0 33.33%; /* 3 elementos */
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-wrapper .slide {
+    flex: 0 0 50%; /* 2 elementos */
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-wrapper .slide {
+    flex: 0 0 100%; /* 1 elemento */
+  }
+}

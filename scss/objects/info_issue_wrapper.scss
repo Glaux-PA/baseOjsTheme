@@ -1,0 +1,47 @@
+.info-issue-wrapper {
+	.pretitle {
+		font-size : $font-size-lg;
+		font-weight: $font-weight-medium;
+	}
+
+	.title-issue {
+		font-size : $font-size-md;
+		font-weight: $font-weight-medium;
+		margin-top: $spacer;
+
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+		}
+
+
+		a {
+			text-decoration: none;
+			color: $primary;
+
+			&:hover,
+			&:focus,
+			&:active {
+				opacity: .5;
+			}
+		}
+	}
+
+	.series {
+		font-size : $font-size-sm-alt;
+		font-weight: $font-weight-medium;
+		color: $primary;
+	}
+
+	.cover-wrapper {
+		img {
+			border-radius:$border-radius;
+			border:1px solid $border-color;
+		}
+	}
+}
+
+
+
+
+
+

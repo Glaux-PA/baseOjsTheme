@@ -1,0 +1,27 @@
+.subsection_menu_wrapper {
+
+   .menu_subsection {
+      @include list-unstyled();
+
+      li {
+         margin-top: $spacer / 2;
+         border-bottom: 1px solid $border-color;
+         padding-bottom: $spacer / 2;
+         align-items: center;
+         display: flex;
+         font-size: $font-size-md;
+
+         a {
+            text-decoration: none;
+         }
+         
+         &:before {
+            font-family: bootstrap-icons !important;
+            content: "\F138";
+            margin-right: $spacer / 2;
+         }
+      }
+   }
+}
+
+

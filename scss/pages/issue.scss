@@ -1,0 +1,65 @@
+.page_issue {	
+	.page_title  {
+		margin-top: $spacer * 3;
+		color: $white;
+	}
+
+	.issue_keywords_block {
+		margin-top: $spacer * 4;
+	}
+
+	.heading {
+		padding-top: $spacer;
+		padding-bottom: $spacer * 3;
+		background: $primary;
+		color: $white;
+
+		.galleys {
+			.title_galleys_G, 
+			h3 {
+				color: $white;
+			}
+		}
+
+		.share_block {
+			text-align: right;
+			margin-bottom: $spacer * 2;
+			
+			.share-list {
+				li {
+					a {
+						color: $white;
+
+						i {
+							border: 1px solid $white;
+						}
+					}
+				}
+			}
+		}
+
+
+		.galleys_links {
+			> li {
+				.obj_galley_link {
+					background: $gray-dark;
+					color: $white;
+					border-radius: 6px;
+					border: 1px solid $gray-dark;
+
+					
+					&:hover {
+						background: $primary-dark;
+						color: $white;
+						border: 1px solid $primary-dark;
+					}
+				}
+			}
+		}
+	}
+
+	.articles_list_row_G {
+		justify-content: center;
+	}
+
+}

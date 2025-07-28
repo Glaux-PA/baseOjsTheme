@@ -1,0 +1,41 @@
+.share_block {
+	
+	.title {
+		font-size: $h5-font-size;
+		font-family: $font-family-sans-serif;
+		font-weight: $font-weight-bold;
+	}
+
+	.share-list {
+		@include list-unstyled();
+		margin: 0;
+
+		li {
+			display: inline-block;
+
+			a {
+				color: $primary;
+				text-decoration: none;
+				display: inline-block;
+				text-align: center;
+
+				&:hover,
+				&:focus,
+				&:active {
+					opacity: .5;
+				}
+
+				i {
+					border: 1px solid $primary;
+					border-radius: 50px;
+					padding: 5px;
+					height: 35px;
+					width: 35px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+

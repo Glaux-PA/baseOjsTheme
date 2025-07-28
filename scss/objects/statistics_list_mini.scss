@@ -1,0 +1,17 @@
+.statistics_list_mini_G {
+	@include list-unstyled();
+	margin-top: 0;
+
+	> li {
+		display: inline-block;
+		font-size: $font-size-sm-alt;
+		margin-right: $spacer / 4;
+
+		&:last-child {
+			margin-left: $spacer / 4;
+		}
+	}
+}
+
+
+

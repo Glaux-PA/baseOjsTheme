@@ -1,0 +1,40 @@
+.hero_wrapper {
+	padding-top:$spacer * 7;
+	
+	.homepage_about {
+		font-size: $font-size-lg;
+	}
+
+
+	.list_links_inline {
+  		@include list-unstyled();
+  		margin-top: $spacer * 2;
+
+  		li {
+  			display: inline-block;
+  		}
+	}
+
+	.info-issue-wrapper {
+		background:url(../img/waves_bg.svg) no-repeat;
+		background-position: center 100px;
+		margin-top: $spacer * 3;
+
+		.cover-wrapper {
+			img {
+				box-shadow: -20px -20px 0px $primary;
+
+				@include media-breakpoint-up(lg) {
+					box-shadow: -40px -40px 0px $primary;
+				}
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-right: 200px;
+			margin-right: -200px;
+			padding-bottom: 100px;
+			background-size: 700px;
+		}
+  	}
+}

@@ -1,0 +1,45 @@
+.page_index_journal {
+	padding-bottom: $spacer * 4;
+
+	.heading {
+  		.title {
+  			font-size: $h3-font-size;
+			font-weight: $font-weight-medium;
+			margin-top: $spacer * 3;
+
+			@include media-breakpoint-up(sm) {
+				margin-top: 0;
+			}
+  		}
+	}
+
+	.sections {
+		margin-top: $spacer;
+
+		.section {
+			margin-top: 0;
+		}
+	}
+
+	.logos_wrapper {
+		.title {
+			font-size: $font-size-base;
+			font-weight: $font-weight-medium;
+			text-transform: uppercase;
+			margin-bottom: $spacer;
+		}
+
+		.logo {
+			padding: $spacer * 2;
+			border: 1px solid $primary;
+			display: block;
+			margin-bottom: $spacer * 2;
+			border-radius: $border-radius;
+		}
+	}
+
+	.btn-wrapper {
+		text-align: center;
+		margin-top: $spacer * 2;
+	}
+}

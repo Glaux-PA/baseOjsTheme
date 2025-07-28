@@ -1,0 +1,371 @@
+.pkp_structure_head {
+	.head_innerwrapper_G {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+
+	&.is-desktop {
+		.pkp_site_nav_menu {
+			padding-top: $spacer;
+			padding-bottom: $spacer;
+
+			.pkp_navigation_primary_row {
+				display: flex;
+				justify-content: end;
+			}
+		}
+
+		.site_name_wrapper_G {
+			.pkp_site_name {
+				.logo {
+					width: 180px;
+				}
+			}
+		}
+
+		.pkp_navigation_primary,
+		.pkp_navigation_submission {
+			@include list-unstyled();
+			margin-bottom: 0;
+
+			> li {
+				display: inline-block;
+				color: $black;
+				margin-right: $spacer;
+				position: relative;
+				cursor: pointer;
+				font-size: $font-size-lg;
+				text-transform: uppercase;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $primary;
+				}
+
+				a {
+					text-decoration: none;
+					color: $black;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: $primary;
+					}
+				}
+
+				.submenu {
+					@include list-unstyled();
+					position: absolute;
+					background: $white;
+					padding: $spacer;
+					top: 35px;
+					left: -$spacer;
+					min-width: 180px;
+					border: 1px solid $border-color;
+
+					> li {
+						font-size: $font-size-sm-alt;
+						line-height: $line-height-sm;
+						margin-right: 0;
+						margin-bottom: $spacer / 3;
+						text-transform: none;
+					}
+				}
+			}
+		}
+
+		.pkp_navigation_submission {
+			li {
+				a {
+					padding: $spacer / 4 $spacer;
+					border-radius: 5px;
+					border: 1px solid $border-color;
+					color: $white;
+					font-size: $font-size-base;
+					background: $gray-dark;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: $secondary;
+						background: $primary;
+						border: 1px solid $border-color;
+					}
+				}
+			}
+		}
+	}
+
+	.menu_group_wrapper_G {
+		display: flex;
+		justify-content: end;
+		padding-top: $spacer;
+		padding-bottom: $spacer;
+	}
+
+	.pkp_navigation_search_wrapper {
+		margin-right: $spacer;
+	}
+
+	.pkp_navigation_user_wrapper {
+		display: flex;
+  		justify-content: flex-end;
+
+		.pkp_navigation_user {
+			@include list-unstyled();
+			margin: 0;
+
+			> li {
+				display: inline-block;
+
+				&.menuitem_lang,
+				&.profile {
+					position: relative;
+					cursor: pointer;
+
+					.submenu {
+						position: absolute;
+						@include list-unstyled();
+						border: 1px solid $border-color;
+						top: 30px;
+						padding: $spacer/2;
+						width: 140px;
+  						left: 0;
+  						z-index: 1000;
+  						background: $white;
+
+						a {
+							text-decoration: none;
+							color: $black;
+							
+							&:hover,
+							&:focus,
+							&:active {
+								color: $primary;
+							}
+						}
+					}
+				}
+
+				&.menuitem_lang {
+					.submenu {
+						width: auto;
+					}
+				}
+
+				&.menuitem_lang {
+					margin-right: $spacer;
+					font-size: $font-size-sm-alt;
+					padding: $spacer/4 $spacer/2;
+					text-transform: uppercase;
+
+
+					a {
+						color: $black;
+						text-decoration: none;
+
+						&:hover,
+						&:focus,
+						&:active {
+							color: $primary;
+						}
+					}
+				}
+
+				&.profile {
+					padding: $spacer/4 $spacer;
+					font-size: $font-size-sm-alt;
+					cursor: pointer;
+
+					a {
+						color: $black;
+						text-decoration: none;
+						
+						&:hover,
+						&:focus,
+						&:active {
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Menú responsive
+
+.pkp_structure_head {
+	&.is-desktop {
+		display: block;
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+}
+
+// Menú mobile
+
+.pkp_structure_head {
+	&.is-mobile {
+		display: block;
+
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+
+		.site_name_wrapper_G {
+			.pkp_site_name {
+				.logo {
+					width: 220px;
+				}
+			}
+		}
+
+		.pkp_head_wrapper {
+			.btn-menu {
+				font-size: 3rem;
+				color: $primary;
+				text-decoration: none;
+				text-align: right;
+  				display: block;
+
+				&:hover,
+				&:focus,
+				&:active {
+					opacity: .5;
+				}
+			}
+		}
+	}
+
+
+	.pkp_head_wrapper {
+		position: relative;
+		
+		&.overlay-menu-wrapper {
+			background-color: $primary;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1000;
+			height: 100vh;
+			display: none;
+
+			&.is-open {
+				display: block !important;
+			}
+
+			.pkp_navigation_user_wrapper {
+				margin-top: $spacer * 2;
+
+				.menuitem_lang {
+					color: $white;
+					a {
+						color: $white;
+						text-decoration: none;
+
+						&:hover,
+						&:focus,
+						&:active {
+							color: $white;
+						}
+					}
+				}
+
+				.profile {
+					color: $white;
+
+					a {
+						color: $white;
+						text-decoration: none;
+						
+						&:hover,
+						&:focus,
+						&:active {
+							color: $white;
+						}
+					}
+				}
+			}
+
+			.pkp_navigation_search_wrapper {
+				margin-top: $spacer;
+				margin-right: 0;
+
+				.pkp_search {
+					width: 100%;
+					position: relative;
+
+					.form-control {
+						border: 1px solid $white;
+						background: $primary;
+					}
+
+					.bi-search {
+						font-size: $h5-font-size;
+						position: absolute;
+						top: .15rem;
+						right: $spacer / 2;
+						color: $white;
+		 			}
+				}
+			}
+
+			.btn-menu {
+				color: $white;
+			}
+
+			.pkp_site_nav_menu {
+				background: $primary;
+				padding: 0;
+
+				.pkp_navigation_primary_row {
+					margin-top: $spacer * 2;
+					padding-bottom: $spacer * 2;
+
+					.pkp_navigation_primary,
+					.pkp_navigation_submission {
+						@include list-unstyled();
+						margin-bottom: 0;
+
+						li {
+							color: $white;
+							font-size: $font-size-lg;
+							display: block;
+							cursor: pointer;
+
+							a {
+								text-decoration: none;
+								color: $white;
+
+								&:hover,
+								&:focus,
+								&:active {
+									opacity: .5;
+								}
+							}
+
+							.submenu {
+								@include list-unstyled();
+								margin-top: $spacer;
+								margin-bottom: $spacer;
+
+
+								> li {
+									font-size: $font-size-base;
+									line-height: $line-height-sm;
+									margin-bottom: $spacer / 4;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

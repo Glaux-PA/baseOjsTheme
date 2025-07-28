@@ -1,0 +1,114 @@
+// Color system
+
+$white:    #fff;
+$gray-100: #f5f7fb;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$primary:       #0e3692;
+$primary-light: #0e3692;
+$primary-dark:  #0b275e;
+$secondary:     #f59701;
+$gray-bg: #f5f7fb;
+$gray-dark: #1e2326;
+$border-color: #e7ebf4;
+
+$gray-bg-dark:#d7dee5;
+
+
+
+
+// Typography
+$font-family-sans-serif:      'Work Sans', sans-serif;
+$font-family-base:            $font-family-sans-serif;
+
+
+$font-size-root:              null;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875; // 14px
+$font-size-sm-alt:            $font-size-base * 0.9375; //15px
+$font-size-lg:                $font-size-base * 1.25;
+$font-size-md:                $font-size-base * 1.125;
+
+$font-size-extra:    $font-size-base * 3;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          500;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.5;
+$line-height-xs:              1.05;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+
+$small-font-size:             $font-size-sm;
+
+
+// scss-docs-start headings-variables
+$headings-font-weight:        $font-weight-medium;
+$headings-line-height:        $line-height-sm;
+$headings-color:              $black;
+// scss-docs-end headings-variables
+
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
+//@include media-breakpoint-up(sm) { ... }
+//@include media-breakpoint-up(md) { ... }
+//@include media-breakpoint-up(lg) { ... }
+//@include media-breakpoint-up(xl) { ... }
+//@include media-breakpoint-up(xxl) { ... }
+
+
+// Formularios
+
+
+$input-color:                      $black;
+$input-border-color:            $gray-600;
+$input-border-radius:                   0;
+
+
+
+$border-radius: 15px;

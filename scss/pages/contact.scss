@@ -1,0 +1,47 @@
+.page_contact {
+	.title_text_block_G {
+		font-size: $font-size-lg;
+		font-weight: $font-weight-semibold;
+		margin-bottom: $spacer;
+		margin-top: $spacer * 2;
+		font-family: $font-family-sans-serif;
+	}
+
+	.inner_wrapper_bg {
+		background:url(../img/waves_bg.svg) repeat-x;
+		background-color: $gray-bg;
+		background-size: 500px;
+		background-position: center;
+		padding-top: $spacer * 2;
+		padding-bottom: $spacer * 4;
+	}
+
+	.contact_section {
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+
+		.primary,
+		.support {
+			padding: $spacer * 2;
+			background: $white;
+			box-shadow: 0px 0px 40px 0px $gray-bg-dark;
+			border-radius: $border-radius;
+			margin-bottom: $spacer * 2;
+
+			@include media-breakpoint-up(sm) {
+				width: 47%;
+			}
+		}
+	}
+	
+	.btn {
+		margin-bottom: $spacer;
+	}
+}
+
+.page.page_contact  {
+	padding-bottom: 0;
+}

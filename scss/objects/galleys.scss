@@ -1,0 +1,41 @@
+.galleys {
+	.title_galleys_G, 
+	h3 {
+		font-size: $font-size-base;
+		font-weight: $font-weight-semibold;
+		font-family: $font-family-sans-serif;
+		margin-top: $spacer * 2;
+	}
+}
+
+.galleys_links {
+	@include list-unstyled();
+
+	> li {
+		display: inline-block;
+		margin-bottom: $spacer / 2;
+		margin-right: $spacer / 4;
+
+		.obj_galley_link {
+			display: inline-block;
+			font-family: $font-family-sans-serif;
+			font-size: $font-size-sm-alt;
+			background-color: $white;
+			color: $primary;
+			text-decoration: none;
+			font-weight: $font-weight-medium;
+			border: 1px solid $primary;
+			padding:0 $spacer / 4;
+			border-radius: 4px;
+
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $white;
+				background: $primary;
+				border-bottom: 1px solid $primary;
+			}
+		}
+	}
+}

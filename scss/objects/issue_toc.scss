@@ -1,0 +1,51 @@
+.obj_issue_toc {
+	.heading {		
+		.title_G, .title {
+			font-size: $h3-font-size;
+			font-weight: $font-weight-semibold;
+			margin-top: $spacer;
+		}
+
+		.current_issue_title {
+			font-size: $h5-font-size;
+			font-weight: $font-weight-normal;
+		}
+
+
+		.cover-wrapper {
+			img {
+				border-radius:$border-radius;
+				max-width: 270px;
+			}
+		}
+
+		.galleys_links {
+			> li {
+				.obj_galley_link {
+					background: $primary;
+					color: $white;
+					font-size: $font-size-lg;
+					padding: $spacer / 2 $spacer * 2;
+					border-bottom: 0;
+					border-radius: 6px;
+					
+					&:hover {
+						background: $primary-dark;
+					}
+				}
+			}
+		}
+	}
+
+	.articles_list_wrapper {
+		background:url(../img/waves_bg.svg) repeat;
+		background-color: $gray-bg;
+		background-size: 500px;
+		background-position: 200px;
+
+		.sections {
+			margin-top: 0;
+			padding-top: $spacer * 4;
+		}
+	}
+}

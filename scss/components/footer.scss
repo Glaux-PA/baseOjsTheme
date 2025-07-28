@@ -1,0 +1,184 @@
+.pkp_structure_footer_wrapper {
+	background: $gray-dark;
+	padding-bottom: $spacer * 2;
+	color: $white;
+	font-size: $font-size-sm-alt;
+
+	.title_col_footer_G {
+		font-size: $font-size-md;
+		font-weight: $font-weight-medium;
+		color: $white;
+	}
+
+	a {
+		color: $white;
+		&:hover,
+		&:focus,
+		&:active {
+			opacity: .6;
+		}
+	}
+
+	.illustration_wrapper {
+		border-bottom: 1px solid $gray-600;
+		text-align: center;
+		margin-bottom: $spacer * 3;
+
+		img {
+			max-width: 900px;
+			margin-bottom: -19px;
+		}
+	}
+
+	.pkp_navigation_footer_wrapper {
+		text-align: center;
+
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+		}
+
+		.pkp_navigation_footer {
+			@include list-unstyled();
+
+			li {
+				a {
+					opacity: .7;
+					text-decoration: none;
+
+					&:hover,
+					&:focus,
+					&:active {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.info_extra_wrapper {
+		opacity: .7;
+		margin-top: $spacer * 2;
+		font-size: $font-size-sm;
+
+		@include media-breakpoint-up(sm) {
+			justify-content: center;
+			display: flex;
+
+			.issn {
+				&:before {
+					content: '/';
+					padding-left: $spacer / 3;
+				}
+			}
+		}
+	}
+
+	.info_license_wrapper {
+		opacity: .7;
+		text-align: center;
+		font-size: $font-size-sm;
+	}
+	
+	.pkp_brand_footer {
+		text-align: center;
+
+		img {
+			width: 200px;
+			display: inline-block;
+			margin-bottom: $spacer * 2;
+		}
+	}
+
+	.pkp_footer_content_wrapper_G {
+		background: $primary-dark;
+		padding-top: $spacer * 2;
+		padding-bottom: $spacer * 2;
+
+		.pkp_footer_content {
+			ul {
+				@include list-unstyled();
+			}
+		}
+	}
+
+	.info_contact_G_wrapper_G {
+		text-align: center;
+		margin-top: $spacer * 2;
+
+		&.has-no-title {
+			margin-top: 2.3rem;
+		}
+
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+			margin-top: 0;
+		}
+
+		.info_contact_G {
+			opacity: .7;
+
+			@include media-breakpoint-up(sm) {
+				position: relative;
+				display: block;
+			}
+
+			&.is-mail {
+				padding-left: $spacer * 1.5;
+
+				@include media-breakpoint-up(sm) {
+					&:before {
+						font-family: bootstrap-icons !important;
+						content: "\F32F";
+						font-size: $font-size-base;
+						position: absolute;
+						left: 0;
+					}
+				}
+			}
+
+			&.is-phone {
+				padding-left: $spacer * 1.5;
+
+				@include media-breakpoint-up(sm) {
+					&:before {
+						font-family: bootstrap-icons !important;
+						content: "\F5C1";
+						font-size: $font-size-base;
+						position: absolute;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.pkp_structure_footer {
+		padding-top:  $spacer * 2;
+	}
+
+	.logos_wrapper  {
+		padding-top:  $spacer * 2;
+		padding-bottom:  $spacer * 2;
+
+		.logo_extra_1 {
+			width: 245px;
+		}		
+
+		.logo_extra_2 {
+			width: 150px;
+		}
+	}
+
+	.license_badge {
+		text-align: center;
+		padding-left: $spacer;
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+			padding: $spacer;
+			margin-top: 0;
+		}
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
+	}
+}

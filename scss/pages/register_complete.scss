@@ -1,0 +1,15 @@
+.page_register_complete {
+	padding-bottom: $spacer * 4;
+
+	.registration_complete_actions {
+		@include list-unstyled();
+	}
+}
+
+.page_lost_password {
+	padding-bottom: $spacer * 4;
+
+	.btn-link {
+		margin-left: $spacer / 2;
+	}
+}
