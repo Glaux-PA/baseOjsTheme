@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/galley_link.tpl
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief View of a galley object as a link to view or download the galley, to be used
@@ -32,19 +32,23 @@
 	{assign var="type" value="file"}
 {/if}
 
-{* Get page and parentId for URL *}
-{if $parent instanceOf Issue}
+{* Get path for URL *}
+{if $parent instanceOf APP\issue\Issue}
 	{assign var="page" value="issue"}
 	{assign var="parentId" value=$parent->getBestIssueId()}
 	{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
-{else}
+{else}{* APP\submission\Submission *}
 	{assign var="page" value="article"}
-	{assign var="parentId" value=$parent->getBestId()}
-	{* Get a versioned link if we have an older publication *}
-	{if $publication && $publication->getId() !== $parent->getData('currentPublicationId')}
-		{assign var="path" value=$parentId|to_array:"version":$publication->getId():$galley->getBestGalleyId()}
+	{if $publication}
+		{if $publication->getId() !== $parent->getData('currentPublicationId')}
+			{* Get a versioned link if we have an older publication *}
+			{assign var="path" value=$parent->getBestId()|to_array:"version":$publication->getId():$galley->getBestGalleyId()}
+		{else}
+			{assign var="parentId" value=$publication->getData('urlPath')|default:$article->getId()}
+			{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
+		{/if}
 	{else}
-		{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
+		{assign var="path" value=$parent->getBestId()|to_array:$galley->getBestGalleyId()}
 	{/if}
 {/if}
 
@@ -58,8 +62,7 @@
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="btn galley-link {if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$path}" {if $labelledBy} aria-labelledby={$labelledBy}{/if}>
-
+<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$path}"{if $id} id="{$id}"{/if}{if $labelledBy} aria-labelledby="{$labelledBy}"{/if}>
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}
 		<span class="pkp_screen_reader">

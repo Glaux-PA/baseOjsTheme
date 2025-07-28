@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/indexJournal.tpl
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief Display the index page for a journal
@@ -15,90 +15,68 @@
  * @uses $numAnnouncementsHomepage int Number of announcements to display on the
  *       homepage
  * @uses $issue Issue Current issue
- * @uses $issueIdentificationString string issue identification that relies on user's settings
+ *
+ * @hook Templates::Index::journal []
  *}
-
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
-<main class="page_index_journal">
+<div class="page_index_journal">
 
-	{* Display homepage image if set, and wrap around journal summary if use chooses to display it *}
-	{if $homepageImage}
-		<div
-			class="homepage_image"
-			style="background-image: url('{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}'){if $showJournalSummary}, linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)){/if}">
+	{call_hook name="Templates::Index::journal"}
+
+	{if $highlights->count()}
+		{include file="frontend/components/highlights.tpl" highlights=$highlights}
 	{/if}
 
-	{if $showJournalSummary && $currentJournal->getLocalizedDescription()}
-		<section class="container journal_summary"{if $homepageImage}style="color: #FFF"{/if}>
-			<h2>{translate key="navigation.about"}</h2>
-			{$currentJournal->getLocalizedDescription()}
-		</section>
-	{/if}
-
-	{if $homepageImage}
+	{if $activeTheme && !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
+		<div class="homepage_image">
+			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}"{if $homepageImage.altText} alt="{$homepageImage.altText|escape}"{/if}>
 		</div>
 	{/if}
 
-	<div class="container-fluid container-page">
+	{if $categories && $categories->count() > 0}
+		{include file="frontend/components/categoryHeader.tpl" categories=$categories}
+	{/if}
 
-		{* Announcements *}
-		{if $announcements}
-			<section class="announcements">
-				<h2>{translate key="announcement.announcements"}</h2>
-				<div class="row">
-					{foreach from=$announcements item=announcement}
-						<article class="col-md-4 announcement">
-							<p class="announcement_date">{$announcement->datePosted|date_format:$dateFormatShort|escape}</p>
-							<h3 class="announcement_title">
-								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->id|escape}">
-									{$announcement->getLocalizedData('title')|escape}
-								</a>
-							</h3>
-						</article>
-					{/foreach}
-				</div>
-			</section>
-		{/if}
+	{* Journal Description *}
+	{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
+		<section class="homepage_about">
+			<a id="homepageAbout"></a>
+			<h2>{translate key="about.aboutContext"}</h2>
+			{$currentContext->getLocalizedData('description')}
+		</section>
+	{/if}
 
-		{call_hook name="Templates::Index::journal"}
+	{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
 
-		{* Latest issue *}
-		{if $issue}
-			<section class="current_issue">
-				<header>
-					{strip}
-						<h2 class="current_issue_title">
-							<span class="current_issue_label">{translate key="journal.currentIssue"}</span>
-							{if $issueIdentificationString}
-						 		<span class="current_issue_identification">{$issueIdentificationString|escape}</span>
-							{/if}
-						</h2>
-					{/strip}
+	{* Latest Published Publications *}
+	{if $publishedPublications && $publishedPublications->count()}
+		{include file="frontend/objects/latest_article.tpl" articles=$publishedPublications heading="h2"}
+	{/if}
 
-					{* Published date *}
-					{if $issue->getDatePublished()}
-						<p class="published">
-							<span class="date_label">
-								{translate key="submissions.published"}
-							</span>
-							<span class="date_format">
-									{$issue->getDatePublished()|date_format:$dateFormatLong}
-							</span>
-						</p>
-					{/if}
-				</header>
-				{include file="frontend/objects/issue_toc.tpl"}
-			</section>
-		{/if}
+	{* Latest issue *}
+	{if $issue}
+		<section class="current_issue">
+			<a id="homepageIssue"></a>
+			<h2>
+				{translate key="journal.currentIssue"}
+			</h2>
+			<div class="current_issue_title">
+				{$issue->getIssueIdentification()|escape}
+			</div>
+			{include file="frontend/objects/issue_toc.tpl" heading="h3"}
+			<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+				{translate key="journal.viewAllIssues"}
+			</a>
+		</section>
+	{/if}
 
-		{* Additional Homepage Content *}
-		{if $additionalHomeContent}
-			<section class="additional_content">
-				{$additionalHomeContent}
-			</section>
-		{/if}
-	</div>
-</main><!-- .page -->
+	{* Additional Homepage Content *}
+	{if $additionalHomeContent}
+		<div class="additional_content">
+			{$additionalHomeContent}
+		</div>
+	{/if}
+</div><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}

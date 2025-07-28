@@ -1,8 +1,8 @@
 {**
  * templates/frontend/pages/issueArchive.tpl
  *
- * Copyright (c) 2014-2020 Simon Fraser University
- * Copyright (c) 2003-2020 John Willinsky
+ * Copyright (c) 2014-2021 Simon Fraser University
+ * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief Display a list of recent issues.
@@ -14,7 +14,6 @@
  * @uses $showingEnd int The number of the last item on this page
  * @uses $total int Count of all published monographs
  *}
-
 {capture assign="pageTitle"}
 	{if $prevPage}
 		{translate key="archive.archivesPageNumber" pageNumber=$prevPage+1}
@@ -24,51 +23,44 @@
 {/capture}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$pageTitle}
 
-<main class="page page_issue_archive">
-	<div class="container-fluid container-page">
+<div class="page page_issue_archive">
+	{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
+	<h1>
+		{$pageTitle|escape}
+	</h1>
 
-		{include file="frontend/components/headings.tpl" currentTitle=$pageTitle}
+	{* No issues have been published *}
+	{if empty($issues)}
+		<p>{translate key="current.noCurrentIssueDesc"}</p>
 
-		{* No issues have been published *}
-		{if empty($issues)}
-			<div class="no_issues">
-				<p>{translate key="current.noCurrentIssueDesc"}</p>
-			</div>
+	{* List issues *}
+	{else}
+		<ul class="issues_archive">
+			{foreach from=$issues item="issue"}
+				<li>
+					{include file="frontend/objects/issue_summary.tpl"}
+				</li>
+			{/foreach}
+		</ul>
 
-		{* List issues *}
-		{else}
-			<div class="flex_container issues_list">
-				{foreach from=$issues item=issue}
-					<div class="issue_item">
-						{include file="frontend/objects/issue_summary.tpl"}
-					</div>
-				{/foreach}
-			</div>
-
-			{* Pagination *}
-			{capture assign="prevUrl"}
-				{if $prevPage > 1}
-					{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive" path=$prevPage}
-				{elseif $prevPage === 1}
-					{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}
-				{/if}
-			{/capture}
-			{capture assign="nextUrl"}
-				{if $nextPage}
-					{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive" path=$nextPage}
-				{/if}
-			{/capture}
-			{include
-				file="frontend/components/pagination.tpl"
-				prevUrl=$prevUrl|trim
-				nextUrl=$nextUrl|trim
-				showingStart=$showingStart
-				showingEnd=$showingEnd
-				total=$total
-			}
+		{* Pagination *}
+		{if $prevPage > 1}
+			{capture assign=prevUrl}{url router=PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive" path=$prevPage}{/capture}
+		{elseif $prevPage === 1}
+			{capture assign=prevUrl}{url router=PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}{/capture}
 		{/if}
-	</div> <!-- end of a container -->
-</main>
-
+		{if $nextPage}
+			{capture assign=nextUrl}{url router=PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive" path=$nextPage}{/capture}
+		{/if}
+		{include
+			file="frontend/components/pagination.tpl"
+			prevUrl=$prevUrl
+			nextUrl=$nextUrl
+			showingStart=$showingStart
+			showingEnd=$showingEnd
+			total=$total
+		}
+	{/if}
+</div>
 
 {include file="frontend/components/footer.tpl"}
