@@ -22,14 +22,12 @@ class BaseOjsThemePlugin extends ThemePlugin {
 		);
 
 		// BootsrapIcons
-		$this->addScript('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css');
+		$this->addStyle(
+			'bootstrap',
+			'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css',
+			array('baseUrl' => '')
+		);
 
-
-		// Load icon font FontAwesome - http://fontawesome.io/
-        $this->addStyle(
-            'fontAwesome',
-            $request->getBaseUrl() . '/lib/pkp/styles/fontawesome/fontawesome.css',
-        );
 
 		//Load js
 		$this->addScript(
