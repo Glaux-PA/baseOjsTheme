@@ -103,6 +103,10 @@
                                     </div>
                                 </div>
 
+                                {capture assign="primaryMenu"}
+									{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
+								{/capture}
+
                                 {* Primary navigation menu *}
                                 <nav class="pkp_site_nav_menu" aria-label="{translate|escape key="common.navigation.site"}">
                                     <div class="pkp_navigation_primary_row">
