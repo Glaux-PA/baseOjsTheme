@@ -25,8 +25,6 @@
 <body class="pkp_page_{$requestedPage|escape|default:"index"} pkp_op_{$requestedOp|escape|default:"index"}{if $showingLogo} has_site_logo{/if}" dir="{$currentLocaleLangDir|escape|default:"ltr"}">
 
 	<div class="pkp_structure_page">
-
-
 		{* Header *}
 		<header class="pkp_structure_head is-mobile" id="headerNavigationContainer" role="banner">
 			{* Skip to content nav links *}
