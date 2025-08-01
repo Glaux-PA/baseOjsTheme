@@ -1,5 +1,5 @@
 .pkp_structure_head {
-	.head_innerwrapper_G {
+	.head-innerwrapper {
 		display: flex;
 		align-items: center;
 		justify-content: end;
@@ -17,7 +17,7 @@
 		}
 
 		.site_name_wrapper_G {
-			.pkp_site_name {
+			.pkp_site_name_wrapper {
 				.logo {
 					width: 180px;
 				}
@@ -217,7 +217,7 @@
 			display: none;
 		}
 
-		.site_name_wrapper_G {
+		.pkp_site_name_wrapper {
 			.pkp_site_name {
 				.logo {
 					width: 220px;
