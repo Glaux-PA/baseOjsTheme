@@ -89,7 +89,34 @@
 	                    	</div>
                         </div>
 
-                       
+                        <div class="row">
+                            <div class="col-12">
+                                {* User menu *}
+                                <div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+                                    {load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user" liClass="profile"}
+                                </div>
+
+                                {* Search form *}
+                                <div class="pkp_navigation_search_wrapper">
+                                    <div id="search"><a name="search-form"></a>
+                                       {include file="frontend/components/searchForm_simple_index.tpl"}
+                                    </div>
+                                </div>
+
+                                {capture assign="primaryMenu"}
+									{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
+								{/capture}
+
+                                {* Primary navigation menu *}
+                                <nav class="pkp_site_nav_menu" aria-label="{translate|escape key="common.navigation.site"}">
+                                    <div class="pkp_navigation_primary_row">
+                                        <div class="pkp_navigation_primary_wrapper">
+                                            {$primaryMenu}
+                                        </div>    
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
 			</div><!-- .pkp_head_wrapper -->
