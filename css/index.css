@@ -3384,7 +3384,7 @@ a:hover, a:focus, a:active {
   color: #0b275e;
 }
 
-.pkp_structure_head .head_innerwrapper_G {
+.pkp_structure_head .head-innerwrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3407,7 +3407,7 @@ a:hover, a:focus, a:active {
       -ms-flex-pack: end;
           justify-content: end;
 }
-.pkp_structure_head.is-desktop .site_name_wrapper_G .pkp_site_name .logo {
+.pkp_structure_head.is-desktop .site_name_wrapper_G .pkp_site_name_wrapper .logo {
   width: 180px;
 }
 .pkp_structure_head.is-desktop .pkp_navigation_primary,
@@ -3574,7 +3574,7 @@ a:hover, a:focus, a:active {
     display: none;
   }
 }
-.pkp_structure_head.is-mobile .site_name_wrapper_G .pkp_site_name .logo {
+.pkp_structure_head.is-mobile .pkp_site_name_wrapper .pkp_site_name .logo {
   width: 220px;
 }
 .pkp_structure_head.is-mobile .pkp_head_wrapper .btn-menu {
