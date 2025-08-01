@@ -77,8 +77,7 @@
                                 {* Logo *}
                                 <div class="pkp_site_name">
                                     <a href="#">
-                                        <img class="logo" src="{$baseUrl}/{$activeTheme->pluginPath}/img/logos/drassana_logo_white.svg">
-                                    </a>
+                                             </a>
                                 </div>
                             </div>
 
