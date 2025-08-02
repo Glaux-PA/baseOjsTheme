@@ -22,9 +22,11 @@
 			<li class="{$liClass|escape}">
 				<a href="{$navigationMenuItemAssignment->navigationMenuItem->getUrl()}">
 					{$navigationMenuItemAssignment->navigationMenuItem->getLocalizedTitle()}
+					<i class="bi bi-chevron-down"></i>
+
 				</a>
 				{if $navigationMenuItemAssignment->navigationMenuItem->getIsChildVisible()}
-					<ul>
+					<ul class="submenu hidden-element">
 						{foreach key=childField item=childNavigationMenuItemAssignment from=$navigationMenuItemAssignment->children}
 							{if $childNavigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
 								<li class="{$liClass|escape}">
