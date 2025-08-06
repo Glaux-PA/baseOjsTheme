@@ -3,11 +3,11 @@
         {translate key="submissions.published.latest"}
     </{$heading}>
 
-    <ul class="cmp_article_list articles">
+    <div class="articles-list-row">
         {foreach from=$articles item=article}
-            <li>
+            <div class="article-wrapper">
                 {include file="frontend/objects/article_summary.tpl" heading=$articleHeading}
-            </li>
+            </div>
         {/foreach}
-    </ul>
+    </div>
 </div>
