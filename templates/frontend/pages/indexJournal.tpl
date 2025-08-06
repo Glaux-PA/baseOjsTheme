@@ -62,6 +62,17 @@
 			</div>
 
 			<div class="col-md-4">
+				{* Sidebars *}
+				{if empty($isFullWidth)}
+					{capture assign="sidebarCode"}{call_hook name="Templates::Common::Sidebar"}{/capture}
+					{if $sidebarCode}
+						<div class="pkp_structure_sidebar left" role="complementary">
+							{$sidebarCode}
+						</div><!-- pkp_sidebar.left -->
+					{/if}
+				{/if}
+
+
 				{* Additional Homepage Content *}
 				{if $additionalHomeContent}
 					<div class="additional_content">
