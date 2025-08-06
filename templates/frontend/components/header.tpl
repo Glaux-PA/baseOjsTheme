@@ -74,12 +74,22 @@
                     <div class="container">
                         <div class="row head_innerwrapper_G">
                             <div class="col-10 site_name_wrapper">
-                                {* Logo *}
-                                <div class="pkp_site_name">
-                                    <a href="#">
-                                        <img class="logo" src="{$baseUrl}/{$activeTheme->pluginPath}/img/logos/drassana_logo_white.svg">
-                                    </a>
-                                </div>
+								<div class="pkp_site_name">
+									{capture assign="homeUrl"}
+										{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
+									{/capture}
+									{if $displayPageHeaderLogo}
+										<a href="{$homeUrl}" class="is_img">
+											<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{/if} />
+										</a>
+									{elseif $displayPageHeaderTitle}
+										<a href="{$homeUrl}" class="is_text">{$displayPageHeaderTitle|escape}</a>
+									{else}
+										<a href="{$homeUrl}" class="is_img">
+											<img src="{$baseUrl}/templates/images/structure/logo.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" width="180" height="90" />
+										</a>
+									{/if}
+								</div>
                             </div>
 
                            <div class="col-2">
@@ -121,6 +131,57 @@
                 </div>
 			</div><!-- .pkp_head_wrapper -->
 		</header><!-- .pkp_structure_head -->
+
+
+		<header class="pkp_structure_head is-desktop" id="headerNavigationContainer" role="banner">    
+            {* Menu Desktop *}
+            <div class="pkp_head_wrapper">
+                <div class="container">
+                    <div class="head_innerwrapper">
+                        <div class="menu-group-wrapper">
+                            {* Search form *}
+                            <div class="pkp_navigation_search_wrapper">
+                                <a href="{url page="search"}" class="pkp_search pkp_search_desktop">
+                                    <i class="bi bi-search" aria-hidden="true"></i>
+                                    <span class="visually-hidden">{translate key="common.search"}</span>
+                                </a>
+                            </div>
+
+                            {* User menu *}
+                            <div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+                                {load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user" liClass="profile"}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 site_name_wrapper_G">
+                        {* Logo *}
+                        <div class="pkp_site_name">
+                            <a href="{$homeUrl}"><img class="logo" src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{/if} /></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                         {capture assign="primaryMenu"}
+							{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
+						{/capture}
+
+                        {* Primary navigation menu *}
+                        <nav class="pkp_site_nav_menu" aria-label="{translate|escape key="common.navigation.site"}">
+                            <div class="pkp_navigation_primary_row">
+                                <div class="pkp_navigation_primary_wrapper">
+                                    {$primaryMenu}
+                                </div>    
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {* Fin Menu Desktop *}
 
 		
 
