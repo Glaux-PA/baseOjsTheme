@@ -3407,7 +3407,7 @@ a:hover, a:focus, a:active {
       -ms-flex-pack: end;
           justify-content: end;
 }
-.pkp_structure_head.is-desktop .site_name_wrapper_G .pkp_site_name_wrapper .logo {
+.pkp_structure_head.is-desktop .site-name-wrapper .pkp_site_name_wrapper .logo {
   width: 180px;
 }
 .pkp_structure_head.is-desktop .pkp_navigation_primary,
