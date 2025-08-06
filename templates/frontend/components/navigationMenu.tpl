@@ -1,30 +1,38 @@
 {**
  * templates/frontend/components/navigationMenu.tpl
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * Copyright (c) 2023 GLAUX Publicaciones Académicas.
  *
- * @brief Primary navigation menu list for the application
- *
- * @uses navigationMenu array Hierarchical array of navigation menu item assignments
- * @uses id string Element ID to assign the outer <ul>
- * @uses ulClass string Class name(s) to assign the outer <ul>
- * @uses liClass string Class name(s) to assign all <li> elements
  *}
 
 {if $navigationMenu}
 	<ul id="{$id|escape}" class="{$ulClass|escape} pkp_nav_list">
+		{if $id eq "navigationUser"}
+			{include file="frontend/components/languageSwitcher.tpl" id="languageLargeNav"}
+		{/if}
+
 		{foreach key=field item=navigationMenuItemAssignment from=$navigationMenu->menuTree}
 			{if !$navigationMenuItemAssignment->navigationMenuItem->getIsDisplayed()}
 				{continue}
 			{/if}
-			<li class="{$liClass|escape}">
-				<a href="{$navigationMenuItemAssignment->navigationMenuItem->getUrl()}">
-					{$navigationMenuItemAssignment->navigationMenuItem->getLocalizedTitle()}
-					<i class="bi bi-chevron-down"></i>
 
-				</a>
+			{if $navigationMenuItemAssignment->navigationMenuItem->getUrl()|strpos:"/register" }
+				{assign var="extraClass" value=' profile_register'}
+			{elseif  $navigationMenuItemAssignment->navigationMenuItem->getUrl()|strpos:"/login"}
+				{assign var="extraClass" value=' profile_login'}
+			{/if}
+			<li
+				class="{$liClass|escape}{$extraClass}{if $currentUrl == $navigationMenuItemAssignment->navigationMenuItem->getUrl() } isActive{/if}">
+				{if $navigationMenuItemAssignment->children}
+					<i class="bi bi-chevron-down"></i>
+				{/if}
+				{if $navigationMenuItemAssignment->navigationMenuItem->getIsChildVisible()}
+					{$navigationMenuItemAssignment->navigationMenuItem->getLocalizedTitle()}
+				{else}
+					<a href="{$navigationMenuItemAssignment->navigationMenuItem->getUrl()}">
+						{$navigationMenuItemAssignment->navigationMenuItem->getLocalizedTitle()}
+					</a>
+				{/if}
 				{if $navigationMenuItemAssignment->navigationMenuItem->getIsChildVisible()}
 					<ul class="submenu hidden-element">
 						{foreach key=childField item=childNavigationMenuItemAssignment from=$navigationMenuItemAssignment->children}
