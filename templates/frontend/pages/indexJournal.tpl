@@ -37,8 +37,6 @@
 			</section>
 		{/if}
 
-		{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
-
 		{* Latest issue *}
 		{if $issue}
 			<section class="current_issue">
@@ -55,6 +53,8 @@
 				</a>
 			</section>
 		{/if}
+
+		{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
 
 		{* Additional Homepage Content *}
 		{if $additionalHomeContent}
