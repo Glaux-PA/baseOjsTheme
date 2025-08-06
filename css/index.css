@@ -3900,7 +3900,7 @@ a:hover, a:focus, a:active {
   opacity: 0.5;
 }
 
-.articles_list_row_G .article_wrapper_G {
+.articles-list-row .article_wrapper_G {
   margin-bottom: 2rem;
 }
 
@@ -5171,7 +5171,7 @@ a:hover, a:focus, a:active {
   color: #fff;
   border: 1px solid #0b275e;
 }
-.page_issue .articles_list_row_G {
+.page_issue .articles-list-row {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
