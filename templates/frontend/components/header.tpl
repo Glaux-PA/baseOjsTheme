@@ -180,7 +180,6 @@
 							{capture assign="homeUrl"}
 								{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
 							{/capture}
-							
 
 							<a href="{$homeUrl}" class="is_img">
 				                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logo.svg">
