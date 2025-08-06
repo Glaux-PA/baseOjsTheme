@@ -202,7 +202,7 @@
                     </div>
 
                     <div class="col-md-8">
-                         {capture assign="primaryMenu"}
+                        {capture assign="primaryMenu"}
 							{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
 						{/capture}
 
