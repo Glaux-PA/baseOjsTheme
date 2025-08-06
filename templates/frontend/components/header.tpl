@@ -82,7 +82,7 @@
 									
 
 									<a href="{$homeUrl}" class="is_img">
-						                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logos/logo.svg">
+						                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logo.svg">
 						            </div>
 
 									{* revisar este código para cargar bien el logo
