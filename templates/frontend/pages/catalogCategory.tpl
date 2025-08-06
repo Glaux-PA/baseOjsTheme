@@ -71,13 +71,13 @@
 	{if empty($publishedSubmissions)}
 		<p>{translate key="catalog.category.noItems"}</p>
 	{else}
-		<ul class="cmp_article_list articles">
+		<div class="articles-list-row">
 			{foreach from=$publishedSubmissions item=article}
-				<li>
+				<div class="article-wrapper">
 					{include file="frontend/objects/article_summary.tpl" article=$article hideGalleys=true heading="h3"}
-				</li>
+				</div>
 			{/foreach}
-		</ul>
+		</div>
 
 		{* Pagination *}
 		{if $prevPage > 1}
