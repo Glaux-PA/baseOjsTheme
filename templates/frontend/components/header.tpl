@@ -75,9 +75,17 @@
                         <div class="row head_innerwrapper_G">
                             <div class="col-10 site_name_wrapper">
 								<div class="pkp_site_name">
+
 									{capture assign="homeUrl"}
 										{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
 									{/capture}
+									
+
+									<a href="{$homeUrl}" class="is_img">
+						                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logos/logo.svg">
+						            </div>
+
+									{* revisar este código para cargar bien el logo
 									{if $displayPageHeaderLogo}
 										<a href="{$homeUrl}" class="is_img">
 											<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{/if} />
@@ -89,6 +97,7 @@
 											<img src="{$baseUrl}/templates/images/structure/logo.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" width="180" height="90" />
 										</a>
 									{/if}
+									*}
 								</div>
                             </div>
 
@@ -184,11 +193,6 @@
         {* Fin Menu Desktop *}
 
 		
-
-
-
-
-
 
 		{* Wrapper for page content and sidebars *}
 		{if $isFullWidth}
