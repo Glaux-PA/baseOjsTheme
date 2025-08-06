@@ -21,7 +21,7 @@
 <div class="page_index_journal">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-9">
 
 
 				{call_hook name="Templates::Index::journal"}
@@ -61,7 +61,7 @@
 				{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
 			</div>
 
-			<div class="col-md-4">
+			<div class="col-md-3">
 				{* Sidebars *}
 				{if empty($isFullWidth)}
 					{capture assign="sidebarCode"}{call_hook name="Templates::Common::Sidebar"}{/capture}
