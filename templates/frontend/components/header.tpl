@@ -52,7 +52,7 @@
 
 									<a href="{$homeUrl}" class="is_img">
 						                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logo.svg">
-						            </div>
+						            </a>
 
 									{* revisar este código para cargar bien el logo
 									{if $displayPageHeaderLogo}
@@ -91,7 +91,7 @@
 
 									<a href="{$homeUrl}" class="is_img">
 						                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logo.svg">
-						            </div>
+						            </a>
 
 									{* revisar este código para cargar bien el logo
 									{if $displayPageHeaderLogo}
