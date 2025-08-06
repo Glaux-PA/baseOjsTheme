@@ -3476,7 +3476,7 @@ a:hover, a:focus, a:active {
   background: #0e3692;
   border: 1px solid #e7ebf4;
 }
-.pkp_structure_head .menu_group_wrapper_G {
+.pkp_structure_head .menu-group-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
