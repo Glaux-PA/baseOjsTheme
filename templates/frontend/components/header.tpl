@@ -85,19 +85,7 @@
 						                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logo.svg">
 						            </div>
 
-									{* revisar este código para cargar bien el logo
-									{if $displayPageHeaderLogo}
-										<a href="{$homeUrl}" class="is_img">
-											<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{/if} />
-										</a>
-									{elseif $displayPageHeaderTitle}
-										<a href="{$homeUrl}" class="is_text">{$displayPageHeaderTitle|escape}</a>
-									{else}
-										<a href="{$homeUrl}" class="is_img">
-											<img src="{$baseUrl}/templates/images/structure/logo.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" width="180" height="90" />
-										</a>
-									{/if}
-									*}
+
 								</div>
                             </div>
 
