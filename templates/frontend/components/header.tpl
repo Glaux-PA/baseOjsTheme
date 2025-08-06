@@ -80,8 +80,8 @@
 
 				<div class="pkp_head_wrapper overlay-menu-wrapper hidden-element">
                     <div class="container">
-                        <div class="row head_innerwrapper_G">
-                            <div class="col-10 site_name_wrapper">
+                        <div class="row head_innerwrapper">
+                            <div class="col-10 site-name-wrapper">
 								<div class="pkp_site_name">
 
 									{capture assign="homeUrl"}
@@ -172,13 +172,34 @@
                     </div>
                 </div>
             </div>
+            
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 site_name_wrapper_G">
-                        {* Logo *}
+                    <div class="col-md-4 site_name_wrapper">
                         <div class="pkp_site_name">
-                            <a href="{$homeUrl}"><img class="logo" src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{/if} /></a>
-                        </div>
+							{capture assign="homeUrl"}
+								{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
+							{/capture}
+							
+
+							<a href="{$homeUrl}" class="is_img">
+				                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logo.svg">
+				            </a>
+
+							{* revisar este código para cargar bien el logo
+							{if $displayPageHeaderLogo}
+								<a href="{$homeUrl}" class="is_img">
+									<img src="{$publicFilesDir}/{$displayPageHeaderLogo.uploadName|escape:"url"}" width="{$displayPageHeaderLogo.width|escape}" height="{$displayPageHeaderLogo.height|escape}" {if $displayPageHeaderLogo.altText != ''}alt="{$displayPageHeaderLogo.altText|escape}"{/if} />
+								</a>
+							{elseif $displayPageHeaderTitle}
+								<a href="{$homeUrl}" class="is_text">{$displayPageHeaderTitle|escape}</a>
+							{else}
+								<a href="{$homeUrl}" class="is_img">
+									<img src="{$baseUrl}/templates/images/structure/logo.png" alt="{$applicationName|escape}" title="{$applicationName|escape}" width="180" height="90" />
+								</a>
+							{/if}
+							*}
+						</div>
                     </div>
 
                     <div class="col-md-8">
