@@ -181,11 +181,10 @@
 								{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
 							{/capture}
 
-							{* revisar este código para cargar bien el logo
 							<a href="{$homeUrl}" class="is_img">
-				                <img class="logo" src="{$baseUrl}/{$activeThemePath}/img/logo.svg">
+
+								<img src="{$baseUrl}/plugins/themes/baseOjsTheme/img/logo.svg" alt="Logo">
 				            </a>
-				             *}
 
 							{if $displayPageHeaderLogo}
 								<a href="{$homeUrl}" class="is_img">
