@@ -20,10 +20,18 @@
 
 <div class="page_index_journal">
 	<div class="container">
+		{* Additional Homepage Content *}
+		{if $additionalHomeContent}
+			<div class="additional_content">
+				{$additionalHomeContent}
+			</div>
+		{/if}
+	</div>
+
+
+	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-
-
 				{call_hook name="Templates::Index::journal"}
 
 				{if $activeTheme && !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
@@ -70,14 +78,6 @@
 							{$sidebarCode}
 						</div><!-- pkp_sidebar.left -->
 					{/if}
-				{/if}
-
-
-				{* Additional Homepage Content *}
-				{if $additionalHomeContent}
-					<div class="additional_content">
-						{$additionalHomeContent}
-					</div>
 				{/if}
 			</div>
 		</div>
