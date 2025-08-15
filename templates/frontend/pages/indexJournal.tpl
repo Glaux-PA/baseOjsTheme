@@ -20,14 +20,17 @@
 
 <div class="page_index_journal">
 	<div class="container">
-		{* Additional Homepage Content *}
-		{if $additionalHomeContent}
-			<div class="additional_content">
-				{$additionalHomeContent}
+		<div class="row">
+				<div class="col-md-6">
+				{* Additional Homepage Content *}
+				{if $additionalHomeContent}
+					<div class="additional_content">
+						{$additionalHomeContent}
+					</div>
+				{/if}
 			</div>
-		{/if}
+		</div>
 	</div>
-
 
 	<div class="container">
 		<div class="row">
