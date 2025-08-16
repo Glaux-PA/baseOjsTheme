@@ -9,7 +9,10 @@
 			font-size: $font-size-lg;
 			font-weight: $font-weight-medium;
 			margin-bottom: $spacer * 2;
+			margin-top: $spacer * 2;
 			font-family: $font-family-sans-serif;
+			background: $gray-bg;
+			padding: 1rem;
 		}
 	}
 }
