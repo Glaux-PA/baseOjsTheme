@@ -46,7 +46,7 @@
 			<div class="col-md-6">
 				{* revisar --este código es provisional porque homepage_image da un error-- *}
 				<a href="{$homeUrl}" class="is_img">
-					<img src="{$baseUrl}/plugins/themes/baseOjsTheme/img/home-img.jpg" alt="Logo">
+					<img src="{$baseUrl}/plugins/themes/baseOjsTheme/img/home-img.jpg" alt="portada">
         		</a>
 
 				{if $activeTheme && !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
