@@ -4509,6 +4509,10 @@ a:hover, a:focus, a:active {
   opacity: 0.5;
 }
 
+.pkp_block {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .pkp_block .title {
   font-size: 1.25rem;
   margin-top: 2rem;
