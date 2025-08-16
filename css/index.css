@@ -3707,7 +3707,7 @@ a:hover, a:focus, a:active {
   color: #fff;
 }
 .pkp_structure_footer_wrapper a {
-  color: #fff;
+  color: #000;
 }
 .pkp_structure_footer_wrapper a:hover, .pkp_structure_footer_wrapper a:focus, .pkp_structure_footer_wrapper a:active {
   opacity: 0.6;
