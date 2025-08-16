@@ -90,3 +90,6 @@ msgstr "No mostrar el gráfico de estadísticas de envíos a los lectores/as."
 
 msgid "plugins.themes.classic.displayStats.monthInitials"
 msgstr "Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic"
+
+msgid "baseOjsTheme.saberMas"
+msgstr "Saber más"
