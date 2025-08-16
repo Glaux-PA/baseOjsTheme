@@ -4568,6 +4568,7 @@ a:hover, a:focus, a:active {
   border: 1px solid #59b893;
   color: #59b893;
   text-decoration: none;
+  border-radius: 6px;
 }
 .btn-alt:hover, .btn-alt:focus, .btn-alt:active,
 .block_make_submission_link:hover,
