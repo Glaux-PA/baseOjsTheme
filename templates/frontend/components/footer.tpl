@@ -18,20 +18,22 @@
 </div><!-- pkp_structure_content -->
 
 <div class="pkp_structure_footer_wrapper" role="contentinfo">
-	<a id="pkp_content_footer"></a>
+	<div class="container">
+		<a id="pkp_content_footer"></a>
 
-	<div class="pkp_structure_footer">
+		<div class="pkp_structure_footer">
 
-		{if $pageFooter}
-			<div class="pkp_footer_content">
-				{$pageFooter}
+			{if $pageFooter}
+				<div class="pkp_footer_content">
+					{$pageFooter}
+				</div>
+			{/if}
+
+			<div class="pkp_brand_footer">
+				<a href="{url page="about" op="aboutThisPublishingSystem"}">
+					<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
+				</a>
 			</div>
-		{/if}
-
-		<div class="pkp_brand_footer">
-			<a href="{url page="about" op="aboutThisPublishingSystem"}">
-				<img alt="{translate key="about.aboutThisPublishingSystem"}" src="{$baseUrl}/{$brandImage}">
-			</a>
 		</div>
 	</div>
 </div><!-- pkp_structure_footer_wrapper -->
