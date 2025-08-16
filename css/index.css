@@ -4990,6 +4990,9 @@ a:hover, a:focus, a:active {
   text-align: center;
   margin-top: 2rem;
 }
+.page_index_journal .obj_issue_toc {
+  margin-top: 2rem;
+}
 
 .page_login .inner_wrapper_bg {
   background: url(../img/waves_bg.svg) repeat-x;
