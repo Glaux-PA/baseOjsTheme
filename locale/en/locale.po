@@ -90,5 +90,5 @@ msgstr "Downloads"
 msgid "plugins.themes.classic.displayStats.noStats"
 msgstr "Download data is not yet available."
 
-msgid "plugins.themes.baseOjsTheme.btn.saberMas"
+msgid "baseOjsTheme.btn.saberMas"
 msgstr "More"
