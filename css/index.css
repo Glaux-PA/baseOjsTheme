@@ -4561,7 +4561,8 @@ a:hover, a:focus, a:active {
 }
 
 .btn-alt,
-.block_make_submission_link {
+.block_make_submission_link,
+.read_more {
   background-color: #fff;
   padding: 0.5rem 2rem;
   border: 1px solid #59b893;
@@ -4571,7 +4572,10 @@ a:hover, a:focus, a:active {
 .btn-alt:hover, .btn-alt:focus, .btn-alt:active,
 .block_make_submission_link:hover,
 .block_make_submission_link:focus,
-.block_make_submission_link:active {
+.block_make_submission_link:active,
+.read_more:hover,
+.read_more:focus,
+.read_more:active {
   background: #59b893;
   border: 1px solid #59b893;
   color: #fff;
