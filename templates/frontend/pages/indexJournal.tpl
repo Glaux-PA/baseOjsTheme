@@ -45,26 +45,7 @@
 				<div class="btn-group">
 					 <a class="btn btn-primary"
                         href="{url router=$smarty.const.ROUTE_PAGE page="about"}">{translate key="btn.saberMas"}</a>
-                    <a href="{url page="submissions" router=$smarty.const.ROUTE_PAGE}" class="btn btn-alt btn-primary">
-                        {translate key="drassanaTheme.sendArticle"}</a>
-                    </a>
 				</div>
-
-				{* Información para lectores, autores y bibliotecarios *}
-                <ul class="list_links_inline">
-                    <li><i class="bi bi-arrow-right-short"></i>
-                        <a
-                            href="{url router=$smarty.const.ROUTE_PAGE page="information" op="readers"}">{translate key="info.lectores"}</a>
-                    </li>
-                    <li><i class="bi bi-arrow-right-short"></i>
-                        <a
-                            href="{url router=$smarty.const.ROUTE_PAGE page="information" op="authors"}">{translate key="info.autores"}</a>
-                    </li>
-                    <li><i class="bi bi-arrow-right-short"></i>
-                        <a
-                            href="{url router=$smarty.const.ROUTE_PAGE page="information" op="librarians"}">{translate key="info.bibliotecarios"}</a>
-                    </li>
-                </ul>
 			</div>
 
 			<div class="col-md-6">
