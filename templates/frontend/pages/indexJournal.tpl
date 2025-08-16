@@ -66,8 +66,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				
-
 				{* Latest issue *}
 				{if $issue}
 					<section class="current_issue">
@@ -78,7 +76,7 @@
 						<div class="current_issue_title">
 							{$issue->getIssueIdentification()|strip_unsafe_html}
 						</div>
-						{include file="frontend/objects/issue_toc.tpl" heading="h3"}
+						{include file="frontend/objects/issue_toc_index.tpl" heading="h3"}
 						<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}" class="read_more">
 							{translate key="journal.viewAllIssues"}
 						</a>
