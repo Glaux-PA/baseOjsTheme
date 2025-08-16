@@ -4563,8 +4563,10 @@ a:hover, a:focus, a:active {
 .btn-alt,
 .block_make_submission_link {
   background-color: #fff;
+  padding: 0.5rem 2rem;
   border: 1px solid #59b893;
   color: #59b893;
+  text-decoration: none;
 }
 .btn-alt:hover, .btn-alt:focus, .btn-alt:active,
 .block_make_submission_link:hover,
