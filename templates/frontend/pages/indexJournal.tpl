@@ -41,6 +41,15 @@
 						{$additionalHomeContent}
 					</div>
 				{/if}
+
+				<div class="btn-group">
+					 <a class="btn btn-primary"
+                        href="{url router=$smarty.const.ROUTE_PAGE page="about"}">{translate key="btn.saberMas"}</a>
+                    <a href="{url page="submissions" router=$smarty.const.ROUTE_PAGE}" class="btn btn-alt btn-primary">
+                        {translate key="drassanaTheme.sendArticle"}</a>
+                    </a>
+				</div>
+
 			</div>
 
 			<div class="col-md-6">
