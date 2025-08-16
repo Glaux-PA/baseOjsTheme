@@ -3923,7 +3923,7 @@ a:hover, a:focus, a:active {
 .obj_article_summary .title {
   font-size: 1.25rem;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 600;
 }
 .obj_article_summary .title a {
   text-decoration: none;
