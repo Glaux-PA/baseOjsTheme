@@ -37,9 +37,11 @@
 .btn-alt,
 .block_make_submission_link {
 	background-color: $white;
+	padding: $spacer / 2 $spacer * 2;
 	border: 1px solid $primary;
 	color: $primary;
-	
+	text-decoration: none;
+
 	&:hover,
 	&:focus,
 	&:active {
