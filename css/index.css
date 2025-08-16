@@ -3697,6 +3697,7 @@ a:hover, a:focus, a:active {
 .pkp_structure_footer_wrapper {
   background: #1e2326;
   padding-bottom: 2rem;
+  margin-top: 4rem;
   color: #fff;
   font-size: 0.9375rem;
 }
