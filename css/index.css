@@ -4050,7 +4050,10 @@ a:hover, a:focus, a:active {
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   font-family: "Work Sans", sans-serif;
+  background: #f5f7fb;
+  padding: 1rem;
 }
 
 .cmp_breadcrumbs ol {
