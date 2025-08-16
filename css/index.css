@@ -3695,10 +3695,10 @@ a:hover, a:focus, a:active {
 }
 
 .pkp_structure_footer_wrapper {
-  background: #1e2326;
+  background: #f5f7fb;
   padding-bottom: 2rem;
   margin-top: 4rem;
-  color: #fff;
+  color: #000;
   font-size: 0.9375rem;
 }
 .pkp_structure_footer_wrapper .title_col_footer_G {
