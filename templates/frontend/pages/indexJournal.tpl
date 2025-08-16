@@ -44,7 +44,7 @@
 
 				<div class="btn-group">
 					 <a class="btn btn-primary"
-                        href="{url router=$smarty.const.ROUTE_PAGE page="about"}">{translate key="btn.saberMas"}</a>
+                        href="{url router=$smarty.const.ROUTE_PAGE page="about"}">{translate key="baseOjsTheme.btn.saberMas"}</a>
 				</div>
 			</div>
 
