@@ -21,11 +21,37 @@
 <div class="page_index_journal">
 	<div class="container">
 		<div class="row">
-				<div class="col-md-6">
+			<div class="col-md-6">
+				{* Revisar qué es este hook *}
+				{call_hook name="Templates::Index::journal"}
+
+				{* Revisar si mantenemos Journal Description aquí o solo en About 
+				{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
+					<section class="homepage_about">
+						<a id="homepageAbout"></a>
+						<h2>{translate key="about.aboutContext"}</h2>
+						{$currentContext->getLocalizedData('description')}
+					</section>
+				{/if}
+				*}
+
 				{* Additional Homepage Content *}
 				{if $additionalHomeContent}
 					<div class="additional_content">
 						{$additionalHomeContent}
+					</div>
+				{/if}
+			</div>
+
+			<div class="col-md-6">
+				{* revisar --este código es provisional porque homepage_image da un error-- *}
+				<a href="{$homeUrl}" class="is_img">
+					<img src="{$baseUrl}/plugins/themes/baseOjsTheme/img/home-img.jpg" alt="Logo">
+        		</a>
+
+				{if $activeTheme && !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
+					<div class="homepage_image">
+						<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}"{if $homepageImage.altText} alt="{$homepageImage.altText|escape}"{/if}>
 					</div>
 				{/if}
 			</div>
@@ -35,22 +61,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				{call_hook name="Templates::Index::journal"}
-
-				{if $activeTheme && !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
-					<div class="homepage_image">
-						<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}"{if $homepageImage.altText} alt="{$homepageImage.altText|escape}"{/if}>
-					</div>
-				{/if}
-
-				{* Journal Description *}
-				{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
-					<section class="homepage_about">
-						<a id="homepageAbout"></a>
-						<h2>{translate key="about.aboutContext"}</h2>
-						{$currentContext->getLocalizedData('description')}
-					</section>
-				{/if}
+				
 
 				{* Latest issue *}
 				{if $issue}
