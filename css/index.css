@@ -4560,12 +4560,16 @@ a:hover, a:focus, a:active {
   color: #0b275e;
 }
 
-.btn-alt {
+.btn-alt,
+.block_make_submission_link {
   background-color: #fff;
   border: 1px solid #59b893;
   color: #59b893;
 }
-.btn-alt:hover, .btn-alt:focus, .btn-alt:active {
+.btn-alt:hover, .btn-alt:focus, .btn-alt:active,
+.block_make_submission_link:hover,
+.block_make_submission_link:focus,
+.block_make_submission_link:active {
   background: #59b893;
   border: 1px solid #59b893;
   color: #fff;
