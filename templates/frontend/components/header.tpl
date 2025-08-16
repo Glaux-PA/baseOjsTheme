@@ -50,9 +50,11 @@
 										{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
 									{/capture}
 									
+									{* revisar --este código es provisional-- *}
 									<a href="{$homeUrl}" class="is_img">
 										<img src="{$baseUrl}/plugins/themes/baseOjsTheme/img/logo.svg" alt="Logo">
 				            		</a>
+				            		
 
 				            		{* revisar este código para cargar bien el logo
 									{if $displayPageHeaderLogo}
@@ -88,6 +90,7 @@
 										{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
 									{/capture}
 									
+									{* revisar --este código es provisional-- *}
 									<a href="{$homeUrl}" class="is_img">
 										<img src="{$baseUrl}/plugins/themes/baseOjsTheme/img/logo.svg" alt="Logo">
 				            		</a>
@@ -180,6 +183,7 @@
 								{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
 							{/capture}
 
+							{* revisar --este código es provisional-- *}
 							<a href="{$homeUrl}" class="is_img">
 								<img src="{$baseUrl}/plugins/themes/baseOjsTheme/img/logo.svg" alt="Logo">
 				            </a>
