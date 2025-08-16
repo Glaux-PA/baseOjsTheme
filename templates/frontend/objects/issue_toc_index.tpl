@@ -37,25 +37,35 @@
 
 	{* Issue introduction area above articles *}
 	<div class="heading">
-
-		{* Issue cover image *}
-		{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
-		{if $issueCover}
-			<div class="cover">
-				{capture assign="defaultAltText"}
-					{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
-				{/capture}
-				<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
+		<div class="row">
+			<div class="col-md-5"> 
+				{* Issue cover image *}
+				{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
+				{if $issueCover}
+					<div class="cover">
+						{capture assign="defaultAltText"}
+							{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
+						{/capture}
+						<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
+					</div>
+				{/if}
 			</div>
-		{/if}
 
-		{* Revisar si se incluye este campo de Description (puede ser acortado) 
-		{if $issue->hasDescription()}
-			<div class="description">
-				{$issue->getLocalizedDescription()|strip_unsafe_html}
+			<div class="col-md-7"> 
+				{* Revisar para mostrar el campo Description acortado *}
+				<div class="description">
+					<p>En este número de 2025 continuamos nuestro compromiso con la exploración de los retos y oportunidades que las tecnologías emergentes presentan en el campo de la comunicación. Este número marca el inicio de nuestra periodicidad anual que publica de manera permanente y abierta durante todo el año para la recepción de artículos con la finalidad de fomentar un flujo constante de investigaciones innovadoras que aborden los desafíos actuales de la comunicación.</p>
+				</div>
+
+				{* Revisar si se incluye este campo de Description (puede ser acortado) 
+				{if $issue->hasDescription()}
+					<div class="description">
+						{$issue->getLocalizedDescription()|strip_unsafe_html}
+					</div>
+				{/if}
+				*}
 			</div>
-		{/if}
-		*}
+		</div>
 
 		{* PUb IDs (eg - URN) *}
 		{foreach from=$pubIdPlugins item=pubIdPlugin}
