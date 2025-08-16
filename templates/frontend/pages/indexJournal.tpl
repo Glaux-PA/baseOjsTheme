@@ -65,7 +65,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-8">
 
 				{* Latest issue *}
 				{if $issue}
@@ -87,7 +87,7 @@
 				{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
 			</div>
 
-			<div class="col-md-3">
+			<div class="col-md-3 offset-md-1">
 				{* Sidebars *}
 				{if empty($isFullWidth)}
 					{capture assign="sidebarCode"}{call_hook name="Templates::Common::Sidebar"}{/capture}
