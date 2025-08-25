@@ -49,7 +49,7 @@
 				</div>
 			{/if}
 
-			<h1>
+			<h1 class="page-title">
 				{$issueIdentification|escape}
 			</h1>
 
