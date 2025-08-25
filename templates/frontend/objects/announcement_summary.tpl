@@ -15,7 +15,7 @@
 {/if}
 
 <article class="obj_announcement_summary">
-	<{$heading}>
+    <{$heading} class="title">
 		<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
 			{$announcement->getLocalizedTitle()|escape}
 		</a>
