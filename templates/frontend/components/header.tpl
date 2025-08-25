@@ -177,7 +177,7 @@
             
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 site_name_wrapper">
+                    <div class="col-md-3 site_name_wrapper">
                         <div class="pkp_site_name">
 							{capture assign="homeUrl"}
 								{url page="index" router=\PKP\core\PKPApplication::ROUTE_PAGE}
@@ -205,7 +205,7 @@
 						</div>
                     </div>
 
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         {capture assign="primaryMenu"}
 							{load_menu name="primary" id="navigationPrimary" ulClass="pkp_navigation_primary"}
 						{/capture}
