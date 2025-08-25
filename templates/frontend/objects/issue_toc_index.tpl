@@ -37,6 +37,9 @@
 
 	{* Issue introduction area above articles *}
 	<div class="heading">
+		{* Share Buttons*}
+    	{include file="frontend/components/share_buttons.tpl" pageTitleTranslated=$issueIdentification}
+
 		<div class="row">
 			<div class="col-md-4"> 
 				{* Issue cover image *}
