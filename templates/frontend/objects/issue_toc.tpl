@@ -37,96 +37,104 @@
 
 	{* Issue introduction area above articles *}
 	<div class="heading">
-		<div class="container"> 
-			{* Issue cover image *}
-			{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
-			{if $issueCover}
-				<div class="cover">
-					{capture assign="defaultAltText"}
-						{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
-					{/capture}
-					<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					{* Issue cover image *}
+					{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
+					{if $issueCover}
+						<div class="cover">
+							{capture assign="defaultAltText"}
+								{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
+							{/capture}
+							<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
+						</div>
+					{/if}
 				</div>
-			{/if}
 
-			<h1 class="page-title">
-				{$issueIdentification|escape}
-			</h1>
+				<div class="col-md-8"> 
+					<h1 class="page-title">
+						{$issueIdentification|escape}
+					</h1>
 
-			{* Description *}
-			{if $issue->hasDescription()}
-				<div class="description">
-					{$issue->getLocalizedDescription()|strip_unsafe_html}
-				</div>
-			{/if}
+					{* Description *}
+					{if $issue->hasDescription()}
+						<div class="description">
+							{$issue->getLocalizedDescription()|strip_unsafe_html}
+						</div>
+					{/if}
 
-			{* PUb IDs (eg - URN) *}
-			{foreach from=$pubIdPlugins item=pubIdPlugin}
-				{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
-				{if $pubId}
-					{assign var="resolvingUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-					<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
-						<span class="type">
-							{$pubIdPlugin->getPubIdDisplayType()|escape}:
-						</span>
-						<span class="id">
-							{if $resolvingUrl}
-								<a href="{$resolvingUrl|escape}">
-									{$resolvingUrl}
+					{* PUb IDs (eg - URN) *}
+					{foreach from=$pubIdPlugins item=pubIdPlugin}
+						{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
+						{if $pubId}
+							{assign var="resolvingUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+							<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
+								<span class="type">
+									{$pubIdPlugin->getPubIdDisplayType()|escape}:
+								</span>
+								<span class="id">
+									{if $resolvingUrl}
+										<a href="{$resolvingUrl|escape}">
+											{$resolvingUrl}
+										</a>
+									{else}
+										{$pubId}
+									{/if}
+								</span>
+							</div>
+						{/if}
+					{/foreach}
+
+					{* DOI *}
+					{assign var=doiObject value=$issue->getData('doiObject')}
+					{if $doiObject}
+						{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
+						<div class="pub_id doi">
+							<span class="type">
+								DOI:
+							</span>
+							<span class="id">
+								<a href="{$doiUrl|escape}">
+									{$doiUrl}
 								</a>
-							{else}
-								{$pubId}
-							{/if}
-						</span>
-					</div>
-				{/if}
-			{/foreach}
+							</span>
+						</div>
+					{/if}
 
-			{* DOI *}
-			{assign var=doiObject value=$issue->getData('doiObject')}
-			{if $doiObject}
-				{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
-				<div class="pub_id doi">
-					<span class="type">
-						DOI:
-					</span>
-					<span class="id">
-						<a href="{$doiUrl|escape}">
-							{$doiUrl}
-						</a>
-					</span>
-				</div>
-			{/if}
+					{* Published date *}
+					{if $issue->getDatePublished()}
+						<div class="published">
+							<span class="label">
+								{translate key="submissions.published"}:
+							</span>
+							<span class="value">
+								{$issue->getDatePublished()|date_format:$dateFormatShort}
+							</span>
+						</div>
+					{/if}
 
-			{* Published date *}
-			{if $issue->getDatePublished()}
-				<div class="published">
-					<span class="label">
-						{translate key="submissions.published"}:
-					</span>
-					<span class="value">
-						{$issue->getDatePublished()|date_format:$dateFormatShort}
-					</span>
+
+					{* Full-issue galleys *}
+					{if $issueGalleys}
+						<div class="galleys">
+							<{$heading} id="issueTocGalleyLabel">
+								{translate key="issue.fullIssue"}
+							</{$heading}>
+							<ul class="galleys_links">
+								{foreach from=$issueGalleys item=galley}
+									<li>
+										{include file="frontend/objects/galley_link.tpl" parent=$issue labelledBy="issueTocGalleyLabel" purchaseFee=$currentJournal->getData('purchaseIssueFee') purchaseCurrency=$currentJournal->getData('currency')}
+									</li>
+								{/foreach}
+							</ul>
+						</div>
+					{/if}
 				</div>
-			{/if}
+			</div>
 		</div>
 	</div>
 
-	{* Full-issue galleys *}
-	{if $issueGalleys}
-		<div class="galleys">
-			<{$heading} id="issueTocGalleyLabel">
-				{translate key="issue.fullIssue"}
-			</{$heading}>
-			<ul class="galleys_links">
-				{foreach from=$issueGalleys item=galley}
-					<li>
-						{include file="frontend/objects/galley_link.tpl" parent=$issue labelledBy="issueTocGalleyLabel" purchaseFee=$currentJournal->getData('purchaseIssueFee') purchaseCurrency=$currentJournal->getData('currency')}
-					</li>
-				{/foreach}
-			</ul>
-		</div>
-	{/if}
 
 	<div class="articles_list_wrapper">
 		<div class="container"> 
