@@ -17,9 +17,9 @@
 
 		.cover {
 			border: 1px solid $primary;
+			background: $primary-dark;
 			
 			img {
-				border: 20px solid $primary-dark;
 				padding: 3rem;
 			}
 		}
