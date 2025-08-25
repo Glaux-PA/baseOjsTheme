@@ -99,8 +99,8 @@
 
 							{if !$disableUserReg}
 								{capture assign=registerUrl}{url page="user" op="register" source=$source}{/capture}
-								<a href="{$registerUrl}" class="btn-link register">
-									{translate key="drassanaTheme.user.login.registerNewAccount"}
+								<a href="{$registerUrl}" class="register">
+									{translate key="user.login.registerNewAccount"}
 								</a>
 							{/if}
 						</div>
