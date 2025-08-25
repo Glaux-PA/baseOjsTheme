@@ -5012,6 +5012,7 @@ a:hover, a:focus, a:active {
   -webkit-box-shadow: 0px 0px 40px 0px #f5f7fb;
           box-shadow: 0px 0px 40px 0px #f5f7fb;
   border-radius: 15px;
+  border: 1px solid #e7ebf4;
 }
 
 .page.page_login {
