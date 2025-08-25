@@ -38,7 +38,7 @@
 	{* Issue introduction area above articles *}
 	<div class="heading">
 		<div class="row">
-			<div class="col-md-3"> 
+			<div class="col-md-4"> 
 				{* Issue cover image *}
 				{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 				{if $issueCover}
@@ -51,7 +51,7 @@
 				{/if}
 			</div>
 
-			<div class="col-md-7 offset-md-1"> 
+			<div class="col-md-8"> 
 				{* Revisar para mostrar el campo Description acortado *}
 				<div class="description">
 					<p>En este número de 2025 continuamos nuestro compromiso con la exploración de los retos y oportunidades que las tecnologías emergentes presentan en el campo de la comunicación. Este número marca el inicio de nuestra periodicidad anual que publica de manera permanente y abierta durante todo el año para la recepción de artículos con la finalidad de fomentar un flujo constante de investigaciones innovadoras que aborden los desafíos actuales de la comunicación.</p>
