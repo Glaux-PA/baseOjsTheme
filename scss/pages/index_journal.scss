@@ -22,29 +22,11 @@
 		}
 	}
 
-	.logos_wrapper {
-		.title {
-			font-size: $font-size-base;
-			font-weight: $font-weight-medium;
-			text-transform: uppercase;
-			margin-bottom: $spacer;
-		}
-
-		.logo {
-			padding: $spacer * 2;
-			border: 1px solid $primary;
-			display: block;
-			margin-bottom: $spacer * 2;
-			border-radius: $border-radius;
-		}
-	}
-
-	.btn-wrapper {
-		text-align: center;
-		margin-top: $spacer * 2;
-	}
-
 	.obj_issue_toc {
 		margin-top: 2rem;
+	}
+
+	.cmp_announcements {
+		margin-top: $spacer * 2;
 	}
 }
