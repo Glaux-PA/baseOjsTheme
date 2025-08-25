@@ -13,9 +13,9 @@
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.login"}
 	</div>
 
-	<div class="inner_wrapper_bg">
+	<div class="inner-wrapper-bg">
 		<div class="container">
-			<div class="form_wrapper_G">
+			<div class="form-wrapper">
 				<h1 class="page_title ">{translate key="user.login"}</h1>
 	
 				<p>
