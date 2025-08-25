@@ -38,10 +38,8 @@
 	}
 
 	.articles_list_wrapper {
-		background:url(../img/waves_bg.svg) repeat;
 		background-color: $gray-bg;
-		background-size: 500px;
-		background-position: 200px;
+		padding-bottom: $spacer * 4;
 
 		.sections {
 			margin-top: 0;
