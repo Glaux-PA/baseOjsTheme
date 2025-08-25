@@ -5173,9 +5173,9 @@ a:hover, a:focus, a:active {
 }
 .page_issue .heading .cover {
   border: 1px solid #59b893;
+  background: #101921;
 }
 .page_issue .heading .cover img {
-  border: 20px solid #101921;
   padding: 3rem;
 }
 .page_issue .heading .galleys .title_galleys_G,
