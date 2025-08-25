@@ -5010,10 +5010,7 @@ a:hover, a:focus, a:active {
 .page_register .inner-wrapper-bg,
 .page_register_complete .inner-wrapper-bg,
 .page_lost_password .inner-wrapper-bg {
-  background: url(../img/waves_bg.svg) repeat-x;
   background-color: #f5f7fb;
-  background-size: 500px;
-  background-position: 200px;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -5023,9 +5020,9 @@ a:hover, a:focus, a:active {
   padding-left: 0;
   list-style: none;
 }
-.page_register .form-wrapper-g,
-.page_register_complete .form-wrapper-g,
-.page_lost_password .form-wrapper-g {
+.page_register .form-wrapper,
+.page_register_complete .form-wrapper,
+.page_lost_password .form-wrapper {
   padding: 2rem;
   background: #fff;
   -webkit-box-shadow: 0px 0px 40px 0px #121b23;
