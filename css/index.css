@@ -4983,10 +4983,7 @@ a:hover, a:focus, a:active {
 }
 
 .page_login .inner-wrapper-bg {
-  background: url(../img/waves_bg.svg) repeat-x;
   background-color: #f5f7fb;
-  background-size: 500px;
-  background-position: center;
   padding-top: 4rem;
   padding-bottom: 4rem;
   border: 1px solid #e7ebf4;
@@ -5013,6 +5010,7 @@ a:hover, a:focus, a:active {
   background-color: #f5f7fb;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  border: 1px solid #e7ebf4;
 }
 .page_register .contexts,
 .page_register_complete .contexts,
@@ -5025,9 +5023,10 @@ a:hover, a:focus, a:active {
 .page_lost_password .form-wrapper {
   padding: 2rem;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 40px 0px #121b23;
-          box-shadow: 0px 0px 40px 0px #121b23;
+  -webkit-box-shadow: 0px 0px 40px 0px #f5f7fb;
+          box-shadow: 0px 0px 40px 0px #f5f7fb;
   border-radius: 15px;
+  border: 1px solid #e7ebf4;
 }
 .page_register .btn-link,
 .page_register_complete .btn-link,
