@@ -3469,7 +3469,7 @@ a:hover, a:focus, a:active {
   border: 1px solid #e7ebf4;
   color: #fff;
   font-size: 1rem;
-  background: #1e2326;
+  background: #121b23;
 }
 .pkp_structure_head.is-desktop .pkp_navigation_submission li a:hover, .pkp_structure_head.is-desktop .pkp_navigation_submission li a:focus, .pkp_structure_head.is-desktop .pkp_navigation_submission li a:active {
   color: #f59701;
@@ -5022,8 +5022,8 @@ a:hover, a:focus, a:active {
 .page_login .form_wrapper_G {
   padding: 2rem;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 40px 0px #d7dee5;
-          box-shadow: 0px 0px 40px 0px #d7dee5;
+  -webkit-box-shadow: 0px 0px 40px 0px #121b23;
+          box-shadow: 0px 0px 40px 0px #121b23;
   border-radius: 15px;
 }
 
@@ -5052,8 +5052,8 @@ a:hover, a:focus, a:active {
 .page_lost_password .form_wrapper_G {
   padding: 2rem;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 40px 0px #d7dee5;
-          box-shadow: 0px 0px 40px 0px #d7dee5;
+  -webkit-box-shadow: 0px 0px 40px 0px #121b23;
+          box-shadow: 0px 0px 40px 0px #121b23;
   border-radius: 15px;
 }
 .page_register .btn-link,
@@ -5126,7 +5126,7 @@ a:hover, a:focus, a:active {
   padding-top: 2rem;
   padding-bottom: 2rem;
   color: #fff;
-  background: #1e2326;
+  background: #121b23;
 }
 .page_article.is-dark .header_article_wrapper_G a {
   color: #fff;
@@ -5157,7 +5157,7 @@ a:hover, a:focus, a:active {
   padding-left: 5rem;
 }
 
-.page_issue .page_title {
+.page_issue .page-title {
   margin-top: 3rem;
   color: #fff;
 }
@@ -5185,10 +5185,10 @@ a:hover, a:focus, a:active {
   border: 1px solid #fff;
 }
 .page_issue .heading .galleys_links > li .obj_galley_link {
-  background: #1e2326;
+  background: #121b23;
   color: #fff;
   border-radius: 6px;
-  border: 1px solid #1e2326;
+  border: 1px solid #121b23;
 }
 .page_issue .heading .galleys_links > li .obj_galley_link:hover {
   background: #0b275e;
@@ -5255,8 +5255,8 @@ a:hover, a:focus, a:active {
 .page_contact .contact_section .support {
   padding: 2rem;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 40px 0px #d7dee5;
-          box-shadow: 0px 0px 40px 0px #d7dee5;
+  -webkit-box-shadow: 0px 0px 40px 0px #121b23;
+          box-shadow: 0px 0px 40px 0px #121b23;
   border-radius: 15px;
   margin-bottom: 2rem;
 }
