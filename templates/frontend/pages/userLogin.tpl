@@ -43,7 +43,7 @@
 
 					<fieldset class="fields">
 						<legend class="pkp_screen_reader">{translate key="user.login"}</legend>
-							<div class="username input-group">
+							<div class="username input-group-g">
 								<label class="form-label">
 									{translate key="user.usernameOrEmail"}
 									<span class="required" aria-hidden="true">*</span>
@@ -55,7 +55,7 @@
 								<input class="form-control" type="text" name="username" id="username" value="{$username|default:""|escape}" maxlength="32" required aria-required="true">
 							</div>
 
-							<div class="password input-group">
+							<div class="password input-group-g">
 								<label class="form-label">
 									{translate key="user.password"}
 									<span class="required" aria-hidden="true">*</span>
@@ -72,7 +72,7 @@
 						
 
 
-							<div class="form-check input-group">
+							<div class="form-check input-group-g">
 								<input class="form-check-input" type="checkbox" name="remember" id="remember" value="1" checked="$remember">
 
 							 	<label class="form-check-label" for="flexCheckDefault">
