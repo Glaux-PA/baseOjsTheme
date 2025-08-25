@@ -17,24 +17,22 @@
 {include file="frontend/components/header.tpl" pageTitleTranslated=$issueIdentification}
 
 <div class="page page_issue">
-	<div class="container"> 
-		{* Display a message if no current issue exists *}
-		{if !$issue}
-			{include file="frontend/components/breadcrumbs_issue.tpl" currentTitleKey="current.noCurrentIssue"}
-			<h1>
-				{translate key="current.noCurrentIssue"}
-			</h1>
-			{include file="frontend/components/notification.tpl" type="warning" messageKey="current.noCurrentIssueDesc"}
+	{* Display a message if no current issue exists *}
+	{if !$issue}
+		{include file="frontend/components/breadcrumbs_issue.tpl" currentTitleKey="current.noCurrentIssue"}
+		<h1>
+			{translate key="current.noCurrentIssue"}
+		</h1>
+		{include file="frontend/components/notification.tpl" type="warning" messageKey="current.noCurrentIssueDesc"}
 
-		{* Display an issue with the Table of Contents *}
-		{else}
-			{include file="frontend/components/breadcrumbs_issue.tpl" currentTitle=$issueIdentification}
-			<h1>
-				{$issueIdentification|escape}
-			</h1>
-			{include file="frontend/objects/issue_toc.tpl"}
-		{/if}
-	</div>
+	{* Display an issue with the Table of Contents *}
+	{else}
+		{include file="frontend/components/breadcrumbs_issue.tpl" currentTitle=$issueIdentification}
+		<h1>
+			{$issueIdentification|escape}
+		</h1>
+		{include file="frontend/objects/issue_toc.tpl"}
+	{/if}
 </div>
 
 {include file="frontend/components/footer.tpl"}
