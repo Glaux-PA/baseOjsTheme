@@ -5160,6 +5160,8 @@ a:hover, a:focus, a:active {
 .page_issue .page-title {
   margin-top: 3rem;
   color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.25;
 }
 .page_issue .issue_keywords_block {
   margin-top: 4rem;
