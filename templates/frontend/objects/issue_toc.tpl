@@ -37,74 +37,75 @@
 
 	{* Issue introduction area above articles *}
 	<div class="heading">
+		<div class="container"> 
+			{* Issue cover image *}
+			{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
+			{if $issueCover}
+				<div class="cover">
+					{capture assign="defaultAltText"}
+						{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
+					{/capture}
+					<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
+				</div>
+			{/if}
 
-		{* Issue cover image *}
-		{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
-		{if $issueCover}
-			<div class="cover">
-				{capture assign="defaultAltText"}
-					{translate key="issue.viewIssueIdentification" identification=$issue->getIssueIdentification()|escape}
-				{/capture}
-				<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:$defaultAltText}">
-			</div>
-		{/if}
+			{* Description *}
+			{if $issue->hasDescription()}
+				<div class="description">
+					{$issue->getLocalizedDescription()|strip_unsafe_html}
+				</div>
+			{/if}
 
-		{* Description *}
-		{if $issue->hasDescription()}
-			<div class="description">
-				{$issue->getLocalizedDescription()|strip_unsafe_html}
-			</div>
-		{/if}
+			{* PUb IDs (eg - URN) *}
+			{foreach from=$pubIdPlugins item=pubIdPlugin}
+				{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{if $pubId}
+					{assign var="resolvingUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
+					<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
+						<span class="type">
+							{$pubIdPlugin->getPubIdDisplayType()|escape}:
+						</span>
+						<span class="id">
+							{if $resolvingUrl}
+								<a href="{$resolvingUrl|escape}">
+									{$resolvingUrl}
+								</a>
+							{else}
+								{$pubId}
+							{/if}
+						</span>
+					</div>
+				{/if}
+			{/foreach}
 
-		{* PUb IDs (eg - URN) *}
-		{foreach from=$pubIdPlugins item=pubIdPlugin}
-			{assign var=pubId value=$issue->getStoredPubId($pubIdPlugin->getPubIdType())}
-			{if $pubId}
-				{assign var="resolvingUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
-				<div class="pub_id {$pubIdPlugin->getPubIdType()|escape}">
+			{* DOI *}
+			{assign var=doiObject value=$issue->getData('doiObject')}
+			{if $doiObject}
+				{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
+				<div class="pub_id doi">
 					<span class="type">
-						{$pubIdPlugin->getPubIdDisplayType()|escape}:
+						DOI:
 					</span>
 					<span class="id">
-						{if $resolvingUrl}
-							<a href="{$resolvingUrl|escape}">
-								{$resolvingUrl}
-							</a>
-						{else}
-							{$pubId}
-						{/if}
+						<a href="{$doiUrl|escape}">
+							{$doiUrl}
+						</a>
 					</span>
 				</div>
 			{/if}
-		{/foreach}
 
-		{* DOI *}
-		{assign var=doiObject value=$issue->getData('doiObject')}
-		{if $doiObject}
-			{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
-			<div class="pub_id doi">
-				<span class="type">
-					DOI:
-				</span>
-				<span class="id">
-					<a href="{$doiUrl|escape}">
-						{$doiUrl}
-					</a>
-				</span>
-			</div>
-		{/if}
-
-		{* Published date *}
-		{if $issue->getDatePublished()}
-			<div class="published">
-				<span class="label">
-					{translate key="submissions.published"}:
-				</span>
-				<span class="value">
-					{$issue->getDatePublished()|date_format:$dateFormatShort}
-				</span>
-			</div>
-		{/if}
+			{* Published date *}
+			{if $issue->getDatePublished()}
+				<div class="published">
+					<span class="label">
+						{translate key="submissions.published"}:
+					</span>
+					<span class="value">
+						{$issue->getDatePublished()|date_format:$dateFormatShort}
+					</span>
+				</div>
+			{/if}
+		</div>
 	</div>
 
 	{* Full-issue galleys *}
