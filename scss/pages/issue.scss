@@ -1,5 +1,5 @@
 .page_issue {	
-	.page_title  {
+	.page-title  {
 		margin-top: $spacer * 3;
 		color: $white;
 	}
@@ -42,10 +42,10 @@
 		.galleys_links {
 			> li {
 				.obj_galley_link {
-					background: $gray-dark;
+					background: $gray-bg-dark;
 					color: $white;
 					border-radius: 6px;
-					border: 1px solid $gray-dark;
+					border: 1px solid $gray-bg-dark;
 
 					
 					&:hover {
