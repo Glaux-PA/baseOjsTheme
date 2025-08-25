@@ -15,6 +15,13 @@
 		background: $gray-bg-dark;
 		color: $white;
 
+		.cover {
+			img {
+				border: 1px solid $gray-bg;
+				padding: 3rem;
+			}
+		}
+
 		.galleys {
 			.title_galleys_G, 
 			h3 {
