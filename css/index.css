@@ -3986,10 +3986,8 @@ a:hover, a:focus, a:active {
   background: #101921;
 }
 .obj_issue_toc .articles_list_wrapper {
-  background: url(../img/waves_bg.svg) repeat;
   background-color: #f5f7fb;
-  background-size: 500px;
-  background-position: 200px;
+  padding-bottom: 4rem;
 }
 .obj_issue_toc .articles_list_wrapper .sections {
   margin-top: 0;
