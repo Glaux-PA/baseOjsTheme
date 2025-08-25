@@ -1,14 +1,13 @@
 {**
  * templates/frontend/pages/userRegister.tpl
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ * Copyright (c) 2025 GLAUX Publicaciones Académicas.
  *
  * User registration form.
  *
  * @uses $primaryLocale string The primary locale for this journal/press
  *}
+ 
 {include file="frontend/components/header.tpl" pageTitle="user.register"}
 
 <div class="page page_register">
