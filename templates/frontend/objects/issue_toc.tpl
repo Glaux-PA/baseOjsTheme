@@ -42,7 +42,7 @@
     		{include file="frontend/components/share_buttons.tpl" pageTitleTranslated=$issueIdentification}
 
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-3">
 					{* Issue cover image *}
 					{assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
 					{if $issueCover}
@@ -55,7 +55,7 @@
 					{/if}
 				</div>
 
-				<div class="col-md-8"> 
+			<div class="col-md-7 offset-md-1"> 
 					<h1 class="page-title">
 						{$issueIdentification|escape}
 					</h1>
