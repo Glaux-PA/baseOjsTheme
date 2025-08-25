@@ -7,7 +7,7 @@
  *
  * @uses $primaryLocale string The primary locale for this journal/press
  *}
- 
+
 {include file="frontend/components/header.tpl" pageTitle="user.register"}
 
 <div class="page page_register">
@@ -15,17 +15,17 @@
 		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="user.register"}
 	</div>
 
-	<h1>
-		{translate key="user.register"}
-	</h1>
-
-	<p>
-		{translate key="common.requiredField"}
-	</p>
-
 	<div class="inner-wrapper-bg">
 		<div class="container">
 			<div class="form-wrapper">
+				<h1 class="page_title ">
+					{translate key="user.register"}
+				</h1>
+
+				<p>
+					{translate key="common.requiredField"}
+				</p>
+
 				<form class="cmp_form register" id="register" method="post" action="{url op="register"}" role="form">
 					{csrf}
 
