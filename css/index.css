@@ -4081,12 +4081,12 @@ a:hover, a:focus, a:active {
   color: #59b893;
 }
 
-.form_wrapper_G {
+.form-wrapper {
   width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .form_wrapper_G {
+  .form-wrapper {
     width: 40%;
   }
 }
@@ -4994,18 +4994,19 @@ a:hover, a:focus, a:active {
   margin-top: 2rem;
 }
 
-.page_login .inner_wrapper_bg {
+.page_login .inner-wrapper-bg {
   background: url(../img/waves_bg.svg) repeat-x;
   background-color: #f5f7fb;
   background-size: 500px;
   background-position: center;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  border: 1px solid #e7ebf4;
 }
 .page_login .btn-link {
   margin-left: 0.5rem;
 }
-.page_login .form_wrapper_G {
+.page_login .form-wrapper {
   padding: 2rem;
   background: #fff;
   -webkit-box-shadow: 0px 0px 40px 0px #f5f7fb;
