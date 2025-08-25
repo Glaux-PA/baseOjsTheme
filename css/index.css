@@ -3381,7 +3381,7 @@ a {
   color: #59b893;
 }
 a:hover, a:focus, a:active {
-  color: #0b275e;
+  color: #121b23;
 }
 
 .pkp_structure_head .head-innerwrapper {
@@ -3773,7 +3773,7 @@ a:hover, a:focus, a:active {
   margin-bottom: 2rem;
 }
 .pkp_structure_footer_wrapper .pkp_footer_content_wrapper_G {
-  background: #0b275e;
+  background: #121b23;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -3946,7 +3946,7 @@ a:hover, a:focus, a:active {
   margin-left: 1rem;
 }
 .obj_article_summary .issue:hover, .obj_article_summary .issue:focus, .obj_article_summary .issue:active {
-  background: #0b275e;
+  background: #121b23;
 }
 .obj_article_summary .meta {
   -webkit-box-flex: 1;
@@ -3993,7 +3993,7 @@ a:hover, a:focus, a:active {
   border-radius: 6px;
 }
 .obj_issue_toc .heading .galleys_links > li .obj_galley_link:hover {
-  background: #0b275e;
+  background: #121b23;
 }
 .obj_issue_toc .articles_list_wrapper {
   background: url(../img/waves_bg.svg) repeat;
@@ -4239,8 +4239,8 @@ a:hover, a:focus, a:active {
 }
 .obj_article_details .galleys .galleys_links > li .obj_galley_link:hover, .obj_article_details .galleys .galleys_links > li .obj_galley_link:focus, .obj_article_details .galleys .galleys_links > li .obj_galley_link:active {
   color: #fff;
-  background: #0b275e;
-  border-bottom: 1px solid #0b275e;
+  background: #121b23;
+  border-bottom: 1px solid #121b23;
 }
 .obj_article_details .authors .label,
 .obj_article_details .authors_list .label {
@@ -4546,8 +4546,8 @@ a:hover, a:focus, a:active {
   font-size: 1rem;
 }
 .btn:hover, .btn:focus, .btn:active {
-  background: #0b275e;
-  border: 1px solid #0b275e;
+  background: #121b23;
+  border: 1px solid #121b23;
   color: #fff;
 }
 
@@ -4559,7 +4559,7 @@ a:hover, a:focus, a:active {
   font-size: 1rem;
 }
 .btn-link:hover, .btn-link:focus, .btn-link:active {
-  color: #0b275e;
+  color: #121b23;
 }
 
 .btn-alt,
@@ -5083,7 +5083,7 @@ a:hover, a:focus, a:active {
 .page_lost_password #connect-orcid-button:hover,
 .page_lost_password #connect-orcid-button:focus,
 .page_lost_password #connect-orcid-button:active {
-  background: #0b275e;
+  background: #121b23;
   color: #fff;
 }
 
@@ -5171,8 +5171,11 @@ a:hover, a:focus, a:active {
   background: #121b23;
   color: #fff;
 }
+.page_issue .heading .cover {
+  border: 1px solid #59b893;
+}
 .page_issue .heading .cover img {
-  border: 1px solid #f5f7fb;
+  border: 20px solid #f5f7fb;
   padding: 3rem;
 }
 .page_issue .heading .galleys .title_galleys_G,
@@ -5196,9 +5199,9 @@ a:hover, a:focus, a:active {
   border: 1px solid #121b23;
 }
 .page_issue .heading .galleys_links > li .obj_galley_link:hover {
-  background: #0b275e;
+  background: #121b23;
   color: #fff;
-  border: 1px solid #0b275e;
+  border: 1px solid #121b23;
 }
 .page_issue .articles-list-row {
   -webkit-box-pack: center;
