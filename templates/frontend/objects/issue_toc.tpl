@@ -124,25 +124,29 @@
 		</div>
 	{/if}
 
-	{* Articles *}
-	<div class="sections">
-	{foreach name=sections from=$publishedSubmissions item=section}
-		<div class="section">
-		{if $section.articles}
-			{if $section.title}
-				<{$heading}>
-					{$section.title|escape}
-				</{$heading}>
-			{/if}
-			<div class="articles-list-row">
-				{foreach from=$section.articles item=article}
-					<div class="article-wrapper">
-						{include file="frontend/objects/article_summary.tpl" heading=$articleHeading}
+	<div class="articles_list_wrapper">
+		<div class="container"> 
+			{* Articles *}
+			<div class="sections">
+			{foreach name=sections from=$publishedSubmissions item=section}
+				<div class="section">
+				{if $section.articles}
+					{if $section.title}
+						<{$heading}>
+							{$section.title|escape}
+						</{$heading}>
+					{/if}
+					<div class="articles-list-row">
+						{foreach from=$section.articles item=article}
+							<div class="article-wrapper">
+								{include file="frontend/objects/article_summary.tpl" heading=$articleHeading}
+							</div>
+						{/foreach}
 					</div>
-				{/foreach}
-			</div>
-		{/if}
+				{/if}
+				</div>
+			{/foreach}
+			</div><!-- .sections -->
 		</div>
-	{/foreach}
-	</div><!-- .sections -->
+	</div>
 </div>
