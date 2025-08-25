@@ -49,6 +49,10 @@
 				</div>
 			{/if}
 
+			<h1>
+				{$issueIdentification|escape}
+			</h1>
+
 			{* Description *}
 			{if $issue->hasDescription()}
 				<div class="description">
