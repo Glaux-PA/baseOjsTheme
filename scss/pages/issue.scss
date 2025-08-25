@@ -16,8 +16,10 @@
 		color: $white;
 
 		.cover {
+			border: 1px solid $primary;
+			
 			img {
-				border: 1px solid $gray-bg;
+				border: 20px solid $gray-bg;
 				padding: 3rem;
 			}
 		}
