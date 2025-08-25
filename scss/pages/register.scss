@@ -1,7 +1,7 @@
 .page_register, 
 .page_register_complete,
 .page_lost_password {
-	.inner_wrapper_bg {
+	.inner-wrapper-bg {
 		background:url(../img/waves_bg.svg) repeat-x;
 		background-color: $gray-bg;
 		background-size: 500px;
@@ -15,7 +15,7 @@
 	}
 
 
-	.form_wrapper_G {
+	.form-wrapper-g {
 		padding: $spacer * 2;
 		background: $white;
 		box-shadow: 0px 0px 40px 0px $gray-bg-dark;
