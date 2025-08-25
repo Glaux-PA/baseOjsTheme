@@ -3695,7 +3695,6 @@ a:hover, a:focus, a:active {
 }
 
 .pkp_structure_footer_wrapper {
-  background: #f5f7fb;
   padding-bottom: 2rem;
   padding-top: 4rem;
   color: #000;
@@ -3711,15 +3710,6 @@ a:hover, a:focus, a:active {
 }
 .pkp_structure_footer_wrapper a:hover, .pkp_structure_footer_wrapper a:focus, .pkp_structure_footer_wrapper a:active {
   opacity: 0.6;
-}
-.pkp_structure_footer_wrapper .illustration_wrapper {
-  border-bottom: 1px solid #6c757d;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.pkp_structure_footer_wrapper .illustration_wrapper img {
-  max-width: 900px;
-  margin-bottom: -19px;
 }
 .pkp_structure_footer_wrapper .pkp_navigation_footer_wrapper {
   text-align: center;
