@@ -17,28 +17,34 @@
 
 <div class="obj_issue_summary">
 
-	{if $issueCover}
-		<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
-			<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
-		</a>
-	{/if}
-
-	<h2>
-		<a class="title" href="{url op="view" path=$issue->getBestIssueId()}">
-			{if $issueTitle}
-				{$issueTitle|escape}
-			{else}
-				{$issueSeries|escape}
+	<div class="row">
+		<div class="col-md-3">
+			{if $issueCover}
+				<a class="cover" href="{url op="view" path=$issue->getBestIssueId()}">
+					<img src="{$issueCover|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
+				</a>
 			{/if}
-		</a>
-		{if $issueTitle && $issueSeries}
-			<div class="series">
-				{$issueSeries|escape}
-			</div>
-		{/if}
-	</h2>
+		</div>
 
-	<div class="description">
-		{$issue->getLocalizedDescription()|strip_unsafe_html}
+		<div class="col-md-9">
+			<h2>
+				<a class="title" href="{url op="view" path=$issue->getBestIssueId()}">
+					{if $issueTitle}
+						{$issueTitle|escape}
+					{else}
+						{$issueSeries|escape}
+					{/if}
+				</a>
+				{if $issueTitle && $issueSeries}
+					<div class="series">
+						{$issueSeries|escape}
+					</div>
+				{/if}
+			</h2>
+
+			<div class="description">
+				{$issue->getLocalizedDescription()|strip_unsafe_html}
+			</div>
+		</div>
 	</div>
 </div><!-- .obj_issue_summary -->
