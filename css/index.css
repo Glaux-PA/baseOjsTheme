@@ -4358,10 +4358,21 @@ a:hover, a:focus, a:active {
 }
 
 .obj_issue_summary {
+  border-radius: 15px;
   background: #fff;
-  padding: 1.5rem;
+  padding: 2rem;
   height: 100%;
-  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 40px 0px #f5f7fb;
+          box-shadow: 0px 0px 40px 0px #f5f7fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #e7ebf4;
+  margin-bottom: 2rem;
 }
 .obj_issue_summary .cover {
   display: inline-block;
@@ -4826,7 +4837,7 @@ a:hover, a:focus, a:active {
 }
 
 .issues-archive-wrapper {
-  background: #121b23;
+  background: #f5f7fb;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -5069,7 +5080,8 @@ a:hover, a:focus, a:active {
 }
 .page_issue_archive .page-title {
   margin-bottom: 2rem;
-  color: #fff;
+  font-size: 2rem;
+  line-height: 1.25;
 }
 .page_issue_archive .cmp_pagination {
   text-align: center;
