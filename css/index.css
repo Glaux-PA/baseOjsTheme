@@ -4365,7 +4365,6 @@ a:hover, a:focus, a:active {
 }
 .obj_issue_summary .cover {
   display: inline-block;
-  border: 1px solid #59b893;
   background: #101921;
 }
 .obj_issue_summary .cover img {
