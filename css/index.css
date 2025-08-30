@@ -4835,7 +4835,7 @@ a:hover, a:focus, a:active {
   list-style: none;
 }
 .issues-archive-wrapper .issues_archive li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .page_index_journal {
