@@ -46,20 +46,4 @@
 	.meta {
 		flex: 1 1 auto;
 	}
-
-	.footer {
-		margin-top: $spacer * 2;
-
-		.arrow-wrapper {
-			display: flex;
-			justify-content: end;
-
-			.arrow-link {
-				background:url(../img/arrow.svg) no-repeat;
-				width: 55px;
-				height: 45px;
-				display: block;
-			}
-		}
-	}
 }
