@@ -1,0 +1,9 @@
+.issues-archive-wrapper li {
+  display: inline-block;
+}
+.issues-archive-wrapper li a {
+  text-decoration: none;
+}
+.issues-archive-wrapper li a:hover, .issues-archive-wrapper li a:focus, .issues-archive-wrapper li a:active {
+  opacity: 0.5;
+}
