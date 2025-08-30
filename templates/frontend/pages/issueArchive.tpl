@@ -30,7 +30,7 @@
 
 	<div class="issues-archive-wrapper">
 		<div class="container">
-			<h1>
+			<h1 class="page-title">
 				{$pageTitle|escape}
 			</h1>
 
