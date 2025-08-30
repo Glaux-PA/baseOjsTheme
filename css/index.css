@@ -3943,23 +3943,6 @@ a:hover, a:focus, a:active {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
-.obj_article_summary .footer {
-  margin-top: 2rem;
-}
-.obj_article_summary .footer .arrow-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-.obj_article_summary .footer .arrow-wrapper .arrow-link {
-  background: url(../img/arrow.svg) no-repeat;
-  width: 55px;
-  height: 45px;
-  display: block;
-}
 
 .obj_issue_toc .heading .title_G, .obj_issue_toc .heading .title {
   font-size: 1.75rem;
@@ -4376,10 +4359,6 @@ a:hover, a:focus, a:active {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-.obj_issue_summary_wrapper {
-  margin-bottom: 2rem;
 }
 
 .obj_issue_summary {
@@ -4826,110 +4805,6 @@ a:hover, a:focus, a:active {
   border: 1px solid #e7ebf4;
 }
 
-.slider-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  background: #59b893;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-top: 4rem;
-  /* Estilos originales */
-}
-.slider-wrapper .slider-title {
-  text-align: left;
-  margin-bottom: 20px;
-  font-size: 1.25rem;
-  color: #fff;
-}
-.slider-wrapper .slider-container {
-  overflow: hidden;
-  width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
-  max-width: 1140px;
-  margin: 0 auto;
-}
-.slider-wrapper .slider-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  width: 100%;
-  margin-left: 0; /* Eliminamos cualquier desplazamiento no deseado */
-}
-.slider-wrapper .slide {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.33%;
-          flex: 0 0 33.33%; /* 3 elementos por defecto */
-  padding: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  min-width: 0; /* Evita desbordamientos */
-}
-.slider-wrapper .slider-prev,
-.slider-wrapper .slider-next {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background: #fff;
-  border: 1px solid #fff;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-.slider-wrapper .slider-prev {
-  left: 0;
-}
-.slider-wrapper .slider-next {
-  right: 0;
-}
-.slider-wrapper .slider-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-.slider-wrapper .view-all-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #000;
-  font-size: 0.9rem;
-}
-.slider-wrapper .view-all-btn:hover {
-  text-decoration: underline;
-}
-.slider-wrapper .obj_issue_summary {
-  width: 100%;
-}
-.slider-wrapper .obj_issue_summary .cover img {
-  width: 100%;
-  height: auto;
-}
-
-/* Responsive */
-@media (max-width: 991px) {
-  .slider-wrapper .slide {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.33%;
-            flex: 0 0 33.33%; /* 3 elementos */
-  }
-}
-@media (max-width: 767px) {
-  .slider-wrapper .slide {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%; /* 2 elementos */
-  }
-}
-@media (max-width: 576px) {
-  .slider-wrapper .slide {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%; /* 1 elemento */
-  }
-}
 .subsection_menu_wrapper .menu_subsection {
   padding-left: 0;
   list-style: none;
@@ -4953,6 +4828,23 @@ a:hover, a:focus, a:active {
   font-family: bootstrap-icons !important;
   content: "\f138";
   margin-right: 0.5rem;
+}
+
+.issues-archive-wrapper {
+  padding-left: 0;
+  list-style: none;
+}
+.issues-archive-wrapper li {
+  display: inline-block;
+  font-size: 1.75rem;
+  margin-right: 0.5rem;
+}
+.issues-archive-wrapper li a {
+  text-decoration: none;
+  color: #fff;
+}
+.issues-archive-wrapper li a:hover, .issues-archive-wrapper li a:focus, .issues-archive-wrapper li a:active {
+  opacity: 0.5;
 }
 
 .page_index_journal {
@@ -5182,7 +5074,6 @@ a:hover, a:focus, a:active {
 }
 
 .page_issue_archive {
-  background: #59b893;
   padding-top: 3rem;
 }
 .page_issue_archive .page_title {
