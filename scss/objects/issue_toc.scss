@@ -1,6 +1,6 @@
 .obj_issue_toc {
 	.heading {		
-		.title_G, .title {
+		.title-g, .title {
 			font-size: $h3-font-size;
 			font-weight: $font-weight-semibold;
 			margin-top: $spacer;
@@ -9,14 +9,6 @@
 		.current_issue_title {
 			font-size: $h5-font-size;
 			font-weight: $font-weight-normal;
-		}
-
-
-		.cover-wrapper {
-			img {
-				border-radius:$border-radius;
-				max-width: 270px;
-			}
 		}
 
 		.galleys_links {
