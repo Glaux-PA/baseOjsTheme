@@ -5,6 +5,7 @@
 	border-radius: $spacer;
 
 	.cover {
+		display: inline-block;
 		border: 1px solid $primary;
 		background: $primary-dark;
 		
