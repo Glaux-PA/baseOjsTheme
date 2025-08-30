@@ -4832,7 +4832,8 @@ a:hover, a:focus, a:active {
 
 .issues-archive-wrapper {
   background: #121b23;
-  padding-top: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .issues-archive-wrapper .issues_archive {
   padding-left: 0;
