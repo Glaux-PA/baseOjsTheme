@@ -1,5 +1,6 @@
 .issues-archive-wrapper {
 	background: $gray-bg-dark;
+	padding-top: $spacer / 2;
 
 	.issues_archive {
 		@include list-unstyled();
