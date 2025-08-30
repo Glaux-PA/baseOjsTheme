@@ -4831,20 +4831,14 @@ a:hover, a:focus, a:active {
 }
 
 .issues-archive-wrapper {
+  background: #121b23;
+}
+.issues-archive-wrapper .issues_archive {
   padding-left: 0;
   list-style: none;
 }
-.issues-archive-wrapper li {
-  display: inline-block;
-  font-size: 1.75rem;
-  margin-right: 0.5rem;
-}
-.issues-archive-wrapper li a {
-  text-decoration: none;
-  color: #fff;
-}
-.issues-archive-wrapper li a:hover, .issues-archive-wrapper li a:focus, .issues-archive-wrapper li a:active {
-  opacity: 0.5;
+.issues-archive-wrapper .issues_archive li {
+  margin-bottom: 0.5rem;
 }
 
 .page_index_journal {
