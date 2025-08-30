@@ -1,20 +1,11 @@
 .issues-archive-wrapper {
-	@include list-unstyled();
+	background: $gray-bg-dark;
 
-	li {
-		display: inline-block;
-		font-size: $h3-font-size;
-		margin-right: $spacer / 2;
+	.issues_archive {
+		@include list-unstyled();
 		
-		a {
-			text-decoration: none;
-			color: $white;
-
-			&:hover,
-			&:focus,
-			&:active {
-				opacity: .5;
-			}
+		li {
+			margin-bottom: $spacer / 2;
 		}
 	}
 }
