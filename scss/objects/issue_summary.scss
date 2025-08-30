@@ -5,7 +5,12 @@
 	border-radius: $spacer;
 
 	.cover {
-		display: inline-block;
+		border: 1px solid $primary;
+		background: $primary-dark;
+		
+		img {
+			padding: 3rem;
+		}
 	}
 
 	.title {
@@ -31,10 +36,5 @@
 
 	.btn {
 		margin-top: $spacer;
-	}
-
-
-	.col-md-10 {
-		align-self: center;
 	}
 }
