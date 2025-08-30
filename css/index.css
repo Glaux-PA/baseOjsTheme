@@ -5070,7 +5070,7 @@ a:hover, a:focus, a:active {
 .page_issue_archive {
   padding-bottom: 4rem;
 }
-.page_issue_archive .page_title {
+.page_issue_archive .page-title {
   margin-bottom: 2rem;
   color: #fff;
 }
