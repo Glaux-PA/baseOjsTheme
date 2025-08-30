@@ -3944,7 +3944,7 @@ a:hover, a:focus, a:active {
           flex: 1 1 auto;
 }
 
-.obj_issue_toc .heading .title_G, .obj_issue_toc .heading .title {
+.obj_issue_toc .heading .title-g, .obj_issue_toc .heading .title {
   font-size: 1.75rem;
   font-weight: 600;
   margin-top: 1rem;
@@ -3952,10 +3952,6 @@ a:hover, a:focus, a:active {
 .obj_issue_toc .heading .current_issue_title {
   font-size: 1.25rem;
   font-weight: 400;
-}
-.obj_issue_toc .heading .cover-wrapper img {
-  border-radius: 15px;
-  max-width: 270px;
 }
 .obj_issue_toc .heading .galleys_links > li .obj_galley_link {
   background: #59b893;
@@ -4368,7 +4364,11 @@ a:hover, a:focus, a:active {
   border-radius: 1rem;
 }
 .obj_issue_summary .cover {
-  display: inline-block;
+  border: 1px solid #59b893;
+  background: #101921;
+}
+.obj_issue_summary .cover img {
+  padding: 3rem;
 }
 .obj_issue_summary .title {
   font-size: 1.125rem;
@@ -4387,11 +4387,6 @@ a:hover, a:focus, a:active {
 }
 .obj_issue_summary .btn {
   margin-top: 1rem;
-}
-.obj_issue_summary .col-md-10 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .obj_announcement_summary {
