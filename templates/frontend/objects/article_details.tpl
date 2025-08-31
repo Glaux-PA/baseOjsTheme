@@ -455,5 +455,4 @@
 
 		</div><!-- .entry_details -->
 	</div><!-- .row -->
-
 </article>
