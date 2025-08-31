@@ -4096,17 +4096,6 @@ a:hover, a:focus, a:active {
   margin-right: 0.5rem;
 }
 
-@media (min-width: 992px) {
-  .obj_article_details .has_bg {
-    background: url(../img/corchete.svg) no-repeat;
-    background-size: auto 200px;
-    background-position: 0rem 1rem;
-    padding-left: 5rem;
-  }
-}
-.obj_article_details .header_article_wrapper_G {
-  margin-bottom: 3rem;
-}
 .obj_article_details .page_title {
   font-size: 2rem;
   line-height: 1.05;
@@ -4981,46 +4970,6 @@ a:hover, a:focus, a:active {
   margin-bottom: 1rem;
   margin-top: 2rem;
   cursor: pointer;
-}
-
-.page_article .header_article_wrapper_G {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background: #f5f7fb;
-}
-.page_article.is-dark .header_article_wrapper_G {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  color: #fff;
-  background: #121b23;
-}
-.page_article.is-dark .header_article_wrapper_G a {
-  color: #fff;
-}
-.page_article.is-dark .header_article_wrapper_G a:hover, .page_article.is-dark .header_article_wrapper_G a:focus, .page_article.is-dark .header_article_wrapper_G a:active {
-  color: #0e3692;
-}
-.page_article.is-dark .header_article_wrapper_G .page_title,
-.page_article.is-dark .header_article_wrapper_G .subtitle {
-  color: #fff;
-}
-.page_article.is-dark .header_article_wrapper_G .item .label {
-  color: #fff;
-}
-.page_article.is-dark .header_article_wrapper_G .info-issue-wrapper .title-issue {
-  color: #fff;
-}
-.page_article.is-dark .header_article_wrapper_G .share_block .share-list li a {
-  color: #fff;
-}
-.page_article.is-dark .header_article_wrapper_G .share_block .share-list li a i {
-  border: 1px solid #fff;
-}
-.page_article.is-dark .header_article_wrapper_G .has_bg {
-  background: url(../img/corchete.svg) no-repeat;
-  background-size: auto 200px;
-  background-position: 0rem 1rem;
-  padding-left: 5rem;
 }
 
 .page_issue .page-title {
