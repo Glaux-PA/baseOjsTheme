@@ -4216,10 +4216,6 @@ a:hover, a:focus, a:active {
   margin-bottom: 0;
   margin-right: 0.5rem;
 }
-.obj_article_details .authors ul.authors li,
-.obj_article_details .authors_list ul.authors li {
-  display: inline-block;
-}
 .obj_article_details .authors ul.authors li .name,
 .obj_article_details .authors_list ul.authors li .name {
   font-weight: 600;
