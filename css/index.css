@@ -4227,10 +4227,8 @@ a:hover, a:focus, a:active {
 }
 .obj_article_details .authors ul.authors li .orcid,
 .obj_article_details .authors_list ul.authors li .orcid {
-  padding-left: 2rem;
   background: url(../img/logo_orcid.svg) no-repeat;
   background-size: 22px;
-  padding-left: 2rem;
   display: block;
   margin-bottom: 0.5rem;
 }
