@@ -1,18 +1,4 @@
 .obj_article_details {
-	.has_bg {
-  		@include media-breakpoint-up(lg) {
-			background:url(../img/corchete.svg) no-repeat;
-			background-size: auto 200px;
-	  		background-position: 0rem  $spacer;
-	  		padding-left: $spacer * 5;
-
-  		}
-	}
-
-	.header_article_wrapper_G {
-		margin-bottom: $spacer * 3;
-	}
-
 	.page_title {
 		font-size: $h2-font-size;
 		line-height: $line-height-xs;
