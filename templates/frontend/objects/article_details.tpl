@@ -88,7 +88,7 @@
 	{/if}
 
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-3">
 			{* Article/Issue cover image *}
 			{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
 				<div class="item cover_image">
@@ -109,7 +109,7 @@
 			{/if}
 		</div>
 
-		<div class="col-md-8">
+		<div class="col-md-8 offset-md-1">
 			<h1 class="page_title">
 				{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
 			</h1>
