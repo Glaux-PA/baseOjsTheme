@@ -4096,6 +4096,9 @@ a:hover, a:focus, a:active {
   margin-right: 0.5rem;
 }
 
+.obj_article_details {
+  margin-top: 3rem;
+}
 .obj_article_details .page_title {
   font-size: 2rem;
   line-height: 1.05;
