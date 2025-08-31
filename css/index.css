@@ -4166,7 +4166,7 @@ a:hover, a:focus, a:active {
   text-transform: uppercase;
 }
 .obj_article_details .doi {
-  margin-left: 0.5rem;
+  margin-top: 1rem;
 }
 .obj_article_details .supporting_agency ul {
   padding-left: 0;
