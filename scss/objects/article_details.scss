@@ -145,8 +145,9 @@
 
 		ul.authors {
 			@include list-unstyled();
-			margin-bottom: 0;
+			margin-bottom: $spacer / 2;
 			margin-right: $spacer / 2;
+			border-bottom: 1px solid $border-color;
 
 			li {
 				.name {
@@ -163,6 +164,8 @@
 					background-size: 22px;
 					display: block;
 					margin-bottom: $spacer / 2;
+					margin-top: $spacer / 2;
+					font-size: $font-size-sm;
 				}
 			}
 		}
