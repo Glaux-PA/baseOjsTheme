@@ -4032,7 +4032,7 @@ a:hover, a:focus, a:active {
   padding-top: 0.5rem;
 }
 .cmp_breadcrumbs ol > li {
-  display: inline-block;
+  display: contents;
 }
 .cmp_breadcrumbs ol > li a {
   display: contents;
