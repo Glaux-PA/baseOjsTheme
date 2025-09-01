@@ -4005,7 +4005,7 @@ a:hover, a:focus, a:active {
 .galleys_links > li .obj_galley_link:hover, .galleys_links > li .obj_galley_link:focus, .galleys_links > li .obj_galley_link:active {
   color: #fff;
   background: #59b893;
-  border-bottom: 1px solid #59b893;
+  border-bottom: 1px solid #101921;
 }
 
 .sections {
