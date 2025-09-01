@@ -155,10 +155,12 @@
 			margin-right: $spacer / 2;
 
 			li {
+				margin-bottom: $spacer / 2;
+				border-bottom: 1px solid $border-color;
+
 				.name {
 					font-weight: $font-weight-semibold;
-					margin-bottom: $spacer / 2;
-					border-bottom: 1px solid $border-color;
+
 				}
 
 				.affiliation {
