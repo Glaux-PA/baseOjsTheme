@@ -12,7 +12,8 @@
 		font-weight: $font-weight-semibold;
 
 		 @include media-breakpoint-up(sm) {
-			font-size: $font-size-extra;
+			font-size: $font-size-lg-extra;
+			line-height: $line-height-sm;
 		 }
 	}
 
@@ -109,6 +110,8 @@
 
 	.cover_image {
 		margin-top: $spacer;
+		padding: $spacer * 2;
+		border-bottom: 1px solid $border-color;
 	}
 
 	.galleys {
