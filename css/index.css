@@ -4233,12 +4233,15 @@ a:hover, a:focus, a:active {
 }
 .obj_article_details .authors ul.authors li .orcid,
 .obj_article_details .authors_list ul.authors li .orcid {
-  background: url(../img/logo_orcid.svg) no-repeat;
-  background-size: 22px;
   display: block;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   font-size: 0.875rem;
+}
+.obj_article_details .authors ul.authors li .orcid .orcid_icon,
+.obj_article_details .authors_list ul.authors li .orcid .orcid_icon {
+  -webkit-filter: saturate(70%) hue-rotate(60deg);
+          filter: saturate(70%) hue-rotate(60deg);
 }
 .obj_article_details .citation .citation_display > .label {
   font-size: 1.25rem;
