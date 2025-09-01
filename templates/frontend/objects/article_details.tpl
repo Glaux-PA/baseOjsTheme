@@ -201,91 +201,98 @@
 	</div>
 
 	<div class="container">
-		<div class="main_entry">
-			
-			{* Abstract *}
-			{if $publication->getLocalizedData('abstract')}
-				<section class="item abstract">
-					<h2 class="label">{translate key="article.abstract"}</h2>
-					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
-				</section>
-			{/if}
+		<div class="row">
+			<div class="col-md-8">
+				<div class="main_entry">
+					{* Abstract *}
+					{if $publication->getLocalizedData('abstract')}
+						<section class="item abstract">
+							<h2 class="label">{translate key="article.abstract"}</h2>
+							{$publication->getLocalizedData('abstract')|strip_unsafe_html}
+						</section>
+					{/if}
 
-			{call_hook name="Templates::Article::Main"}
-
-			{* Usage statistics chart*}
-			{if $activeTheme && $activeTheme->getOption('displayStats') != 'none'}
-				{$activeTheme->displayUsageStatsGraph($article->getId())}
-				<section class="item downloads_chart">
-					<h2 class="label">
-						{translate key="plugins.themes.default.displayStats.downloads"}
-					</h2>
-					<div class="value">
-						<canvas class="usageStatsGraph" data-object-type="Submission" data-object-id="{$article->getId()|escape}"></canvas>
-						<div class="usageStatsUnavailable" data-object-type="Submission" data-object-id="{$article->getId()|escape}">
-							{translate key="plugins.themes.default.displayStats.noStats"}
-						</div>
-					</div>
-				</section>
-			{/if}
-
-			{* Author biographies *}
-			{assign var="hasBiographies" value=0}
-			{foreach from=$publication->getData('authors') item=author}
-				{if $author->getLocalizedData('biography')}
-					{assign var="hasBiographies" value=$hasBiographies+1}
-				{/if}
-			{/foreach}
-			{if $hasBiographies}
-				<section class="item author_bios">
-					<h2 class="label">
-						{if $hasBiographies > 1}
-							{translate key="submission.authorBiographies"}
-						{else}
-							{translate key="submission.authorBiography"}
-						{/if}
-					</h2>
-					<ul class="authors">
+					{* Author biographies *}
+					{assign var="hasBiographies" value=0}
 					{foreach from=$publication->getData('authors') item=author}
 						{if $author->getLocalizedData('biography')}
-							<li class="sub_item">
-								<div class="label">
-									{if $author->getLocalizedData('affiliation')}
-										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
-										{capture assign="authorAffiliation"} {$author->getLocalizedData('affiliation')|escape} {/capture}
-										{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation}
-									{else}
-										{$author->getFullName()|escape}
-									{/if}
-								</div>
-								<div class="value">
-									{$author->getLocalizedData('biography')|strip_unsafe_html}
-								</div>
-							</li>
+							{assign var="hasBiographies" value=$hasBiographies+1}
 						{/if}
 					{/foreach}
-					</ul>
-				</section>
-			{/if}
-
-			{* References *}
-			{if $parsedCitations || $publication->getData('citationsRaw')}
-				<section class="item references">
-					<h2 class="label">
-						{translate key="submission.citations"}
-					</h2>
-					<div class="value">
-						{if $parsedCitations}
-							{foreach from=$parsedCitations item="parsedCitation"}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
+					{if $hasBiographies}
+						<section class="item author_bios">
+							<h2 class="label">
+								{if $hasBiographies > 1}
+									{translate key="submission.authorBiographies"}
+								{else}
+									{translate key="submission.authorBiography"}
+								{/if}
+							</h2>
+							<ul class="authors">
+							{foreach from=$publication->getData('authors') item=author}
+								{if $author->getLocalizedData('biography')}
+									<li class="sub_item">
+										<div class="label">
+											{if $author->getLocalizedData('affiliation')}
+												{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
+												{capture assign="authorAffiliation"} {$author->getLocalizedData('affiliation')|escape} {/capture}
+												{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation}
+											{else}
+												{$author->getFullName()|escape}
+											{/if}
+										</div>
+										<div class="value">
+											{$author->getLocalizedData('biography')|strip_unsafe_html}
+										</div>
+									</li>
+								{/if}
 							{/foreach}
-						{else}
-							{$publication->getData('citationsRaw')|escape|nl2br}
-						{/if}
-					</div>
-				</section>
-			{/if}
-		</div><!-- .main_entry -->
+							</ul>
+						</section>
+					{/if}
+
+					{* References *}
+					{if $parsedCitations || $publication->getData('citationsRaw')}
+						<section class="item references">
+							<h2 class="label">
+								{translate key="submission.citations"}
+							</h2>
+							<div class="value">
+								{if $parsedCitations}
+									{foreach from=$parsedCitations item="parsedCitation"}
+										<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
+									{/foreach}
+								{else}
+									{$publication->getData('citationsRaw')|escape|nl2br}
+								{/if}
+							</div>
+						</section>
+					{/if}
+				</div>
+			</div>
+
+			<div class="col-md-3">
+
+				{call_hook name="Templates::Article::Main"}
+
+				{* Usage statistics chart*}
+				{if $activeTheme && $activeTheme->getOption('displayStats') != 'none'}
+					{$activeTheme->displayUsageStatsGraph($article->getId())}
+					<section class="item downloads_chart">
+						<h2 class="label">
+							{translate key="plugins.themes.default.displayStats.downloads"}
+						</h2>
+						<div class="value">
+							<canvas class="usageStatsGraph" data-object-type="Submission" data-object-id="{$article->getId()|escape}"></canvas>
+							<div class="usageStatsUnavailable" data-object-type="Submission" data-object-id="{$article->getId()|escape}">
+								{translate key="plugins.themes.default.displayStats.noStats"}
+							</div>
+						</div>
+					</section>
+				{/if}
+				
+			</div>			
+		</div>
 
 		<div class="entry_details">
 
