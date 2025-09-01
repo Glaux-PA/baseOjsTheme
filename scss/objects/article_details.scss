@@ -171,12 +171,14 @@
 				}
 
 				.orcid {
-					background: url(../img/logo_orcid.svg) no-repeat;
-					background-size: 22px;
 					display: block;
 					margin-bottom: $spacer / 2;
 					margin-top: $spacer / 2;
 					font-size: $font-size-sm;
+
+					.orcid_icon {
+						filter: saturate(70%) hue-rotate(60deg);
+					}
 				}
 			}
 		}
