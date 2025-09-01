@@ -87,114 +87,116 @@
 		</div>
 	{/if}
 
-	<div class="row">
-		<div class="col-md-3">
-			{* Article/Issue cover image *}
-			{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
-				<div class="item cover_image">
-					<div class="sub_item">
-						{if $publication->getLocalizedData('coverImage')}
-							{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
-							<img
-								src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
-								alt="{$coverImage.altText|escape|default:''}"
-							>
-						{else}
-							<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-								<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
-							</a>
-						{/if}
+	<div class="heading">
+		<div class="row">
+			<div class="col-md-3">
+				{* Article/Issue cover image *}
+				{if $publication->getLocalizedData('coverImage') || ($issue && $issue->getLocalizedCoverImage())}
+					<div class="item cover_image">
+						<div class="sub_item">
+							{if $publication->getLocalizedData('coverImage')}
+								{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
+								<img
+									src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
+									alt="{$coverImage.altText|escape|default:''}"
+								>
+							{else}
+								<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
+									<img src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
+								</a>
+							{/if}
+						</div>
 					</div>
-				</div>
-			{/if}
-		</div>
-
-		<div class="col-md-8 offset-md-1">
-			<h1 class="page_title">
-				{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
-			</h1>
-
-			{if $publication->getLocalizedData('subtitle')}
-				<h2 class="subtitle">
-					{$publication->getLocalizedSubTitle(null, 'html')|strip_unsafe_html}
-				</h2>
-			{/if}
-
-			<div class="main_entry">
-				{if $publication->getData('authors')}
-					<section class="item authors">
-						<h2 class="pkp_screen_reader">{translate key="article.authors"}</h2>
-						<ul class="authors">
-						{foreach from=$publication->getData('authors') item=author}
-							<li>
-								<span class="name">
-									{$author->getFullName()|escape}
-								</span>
-								{if $author->getLocalizedData('affiliation')}
-									<span class="affiliation">
-										{$author->getLocalizedData('affiliation')|escape}
-										{if $author->getData('rorId')}
-											<a href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
-										{/if}
-									</span>
-								{/if}
-								{assign var=authorUserGroup value=$userGroupsById[$author->getData('userGroupId')]}
-								{if $authorUserGroup->getShowTitle()}
-									<span class="userGroup">
-										{$authorUserGroup->getLocalizedName()|escape}
-									</span>
-								{/if}
-								{if $author->getData('orcid')}
-									<span class="orcid">
-										{if $author->getData('orcidAccessToken')}
-											{$orcidIcon}
-										{/if}
-										<a href="{$author->getData('orcid')|escape}" target="_blank">
-											{$author->getData('orcid')|escape}
-										</a>
-									</span>
-								{/if}
-							</li>
-						{/foreach}
-						</ul>
-					</section>
-				{/if}
-
-				{* DOI *}
-				{assign var=doiObject value=$article->getCurrentPublication()->getData('doiObject')}
-				{if $doiObject}
-					{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
-					<section class="item doi">
-						<h2 class="label">
-							{capture assign=translatedDOI}{translate key="doi.readerDisplayName"}{/capture}
-							{translate key="semicolon" label=$translatedDOI}
-						</h2>
-						<span class="value">
-							<a href="{$doiUrl}">
-								{$doiUrl}
-							</a>
-						</span>
-					</section>
-				{/if}
-
-
-				{* Keywords *}
-				{if !empty($publication->getLocalizedData('keywords'))}
-				<section class="item keywords">
-					<h2 class="label">
-						{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
-						{translate key="semicolon" label=$translatedKeywords}
-					</h2>
-					<span class="value">
-						{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
-							{$keyword|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
-						{/foreach}
-					</span>
-				</section>
 				{/if}
 			</div>
-		</div>
-	</div><!-- .row -->
+
+			<div class="col-md-8 offset-md-1">
+				<h1 class="page_title">
+					{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
+				</h1>
+
+				{if $publication->getLocalizedData('subtitle')}
+					<h2 class="subtitle">
+						{$publication->getLocalizedSubTitle(null, 'html')|strip_unsafe_html}
+					</h2>
+				{/if}
+
+				<div class="main_entry">
+					{if $publication->getData('authors')}
+						<section class="item authors">
+							<h2 class="pkp_screen_reader">{translate key="article.authors"}</h2>
+							<ul class="authors">
+							{foreach from=$publication->getData('authors') item=author}
+								<li>
+									<span class="name">
+										{$author->getFullName()|escape}
+									</span>
+									{if $author->getLocalizedData('affiliation')}
+										<span class="affiliation">
+											{$author->getLocalizedData('affiliation')|escape}
+											{if $author->getData('rorId')}
+												<a href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
+											{/if}
+										</span>
+									{/if}
+									{assign var=authorUserGroup value=$userGroupsById[$author->getData('userGroupId')]}
+									{if $authorUserGroup->getShowTitle()}
+										<span class="userGroup">
+											{$authorUserGroup->getLocalizedName()|escape}
+										</span>
+									{/if}
+									{if $author->getData('orcid')}
+										<span class="orcid">
+											{if $author->getData('orcidAccessToken')}
+												{$orcidIcon}
+											{/if}
+											<a href="{$author->getData('orcid')|escape}" target="_blank">
+												{$author->getData('orcid')|escape}
+											</a>
+										</span>
+									{/if}
+								</li>
+							{/foreach}
+							</ul>
+						</section>
+					{/if}
+
+					{* DOI *}
+					{assign var=doiObject value=$article->getCurrentPublication()->getData('doiObject')}
+					{if $doiObject}
+						{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
+						<section class="item doi">
+							<h2 class="label">
+								{capture assign=translatedDOI}{translate key="doi.readerDisplayName"}{/capture}
+								{translate key="semicolon" label=$translatedDOI}
+							</h2>
+							<span class="value">
+								<a href="{$doiUrl}">
+									{$doiUrl}
+								</a>
+							</span>
+						</section>
+					{/if}
+
+
+					{* Keywords *}
+					{if !empty($publication->getLocalizedData('keywords'))}
+					<section class="item keywords">
+						<h2 class="label">
+							{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
+							{translate key="semicolon" label=$translatedKeywords}
+						</h2>
+						<span class="value">
+							{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
+								{$keyword|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
+							{/foreach}
+						</span>
+					</section>
+					{/if}
+				</div>
+			</div>
+		</div><!-- .row -->
+	</div>
 
 
 	<div class="main_entry">
