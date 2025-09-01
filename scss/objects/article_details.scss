@@ -147,12 +147,12 @@
 			@include list-unstyled();
 			margin-bottom: $spacer / 2;
 			margin-right: $spacer / 2;
-			border-bottom: 1px solid $border-color;
 
 			li {
 				.name {
 					font-weight: $font-weight-semibold;
 					margin-bottom: $spacer / 2;
+					border-bottom: 1px solid $border-color;
 				}
 
 				.affiliation {
