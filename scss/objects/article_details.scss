@@ -114,34 +114,6 @@
 		border: 1px solid $border-color;
 	}
 
-	.galleys {
-		margin-top: $spacer;
-		padding-bottom: 0;
-		margin-bottom: 0;
-
-
-		.galleys_links {
-			> li {
-				.obj_galley_link {
-					font-size: $font-size-sm-alt;
-					background-color: $primary;
-					color: $white;
-					border: 1px solid $primary;
-					padding:$spacer / 4 $spacer / 2;
-					border-radius: 4px;
-
-					&:hover,
-					&:focus,
-					&:active {
-						color: $white;
-						background: $primary-dark;
-						border-bottom: 1px solid $primary-dark;
-					}
-				}
-			}
-		}
-	}
-
 	.authors,
 	.authors_list {
 		.label {
