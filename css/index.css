@@ -4029,7 +4029,7 @@ a:hover, a:focus, a:active {
   padding-left: 0;
   list-style: none;
   font-size: 0.875rem;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
 }
 .cmp_breadcrumbs ol > li {
   display: contents;
