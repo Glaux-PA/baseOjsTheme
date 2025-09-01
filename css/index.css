@@ -4037,7 +4037,7 @@ a:hover, a:focus, a:active {
   }
 }
 .cmp_breadcrumbs ol > li {
-  display: inline-block;
+  display: contents;
 }
 .cmp_breadcrumbs ol > li a {
   display: inline-block;
