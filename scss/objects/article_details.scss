@@ -1,5 +1,11 @@
 .obj_article_details {
 	margin-top: $spacer * 3;
+
+	.heading {
+		background: $gray-bg;
+		padding: $spacer * 2;
+	}
+
 	.page_title {
 		font-size: $h2-font-size;
 		line-height: $line-height-xs;
