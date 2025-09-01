@@ -5,10 +5,10 @@
 		padding-top: $spacer / 2;
 
 	> li {
-		display: contents;
+		display: inline-block;
 
 			a {
-				display: inline-block;
+				display: contents;
 				color: $black;
 				text-decoration: none;
 
