@@ -4105,7 +4105,8 @@ a:hover, a:focus, a:active {
 }
 @media (min-width: 576px) {
   .obj_article_details .page_title {
-    font-size: 3rem;
+    font-size: 2rem;
+    line-height: 1.25;
   }
 }
 .obj_article_details .subtitle {
@@ -4181,6 +4182,8 @@ a:hover, a:focus, a:active {
 }
 .obj_article_details .cover_image {
   margin-top: 1rem;
+  padding: 2rem;
+  border-bottom: 1px solid #e7ebf4;
 }
 .obj_article_details .galleys {
   margin-top: 1rem;
