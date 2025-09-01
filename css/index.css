@@ -4215,11 +4215,14 @@ a:hover, a:focus, a:active {
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
 }
+.obj_article_details .authors ul.authors li,
+.obj_article_details .authors_list ul.authors li {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e7ebf4;
+}
 .obj_article_details .authors ul.authors li .name,
 .obj_article_details .authors_list ul.authors li .name {
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #e7ebf4;
 }
 .obj_article_details .authors ul.authors li .affiliation,
 .obj_article_details .authors_list ul.authors li .affiliation {
