@@ -4183,7 +4183,7 @@ a:hover, a:focus, a:active {
 .obj_article_details .cover_image {
   margin-top: 1rem;
   padding: 2rem;
-  border-bottom: 1px solid #e7ebf4;
+  border: 1px solid #e7ebf4;
 }
 .obj_article_details .galleys {
   margin-top: 1rem;
