@@ -28,10 +28,8 @@
 		{/if}
 	</div>
 
-	<div class="container">
-		{* Show article overview *}
-		{include file="frontend/objects/article_details.tpl"}
-	</div>
+	{* Show article overview *}
+	{include file="frontend/objects/article_details.tpl"}
 
 	{call_hook name="Templates::Article::Footer::PageFooter"}
 
