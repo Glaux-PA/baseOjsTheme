@@ -2,7 +2,7 @@
 	ol {
 		@include list-unstyled();
 		font-size: $font-size-sm;
-		padding-top: $spacer / 2;
+		padding-top: $spacer;
 
 	> li {
 		display: contents;
