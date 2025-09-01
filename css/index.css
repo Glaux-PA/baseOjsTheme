@@ -4208,8 +4208,9 @@ a:hover, a:focus, a:active {
 .obj_article_details .authors_list ul.authors {
   padding-left: 0;
   list-style: none;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   margin-right: 0.5rem;
+  border-bottom: 1px solid #e7ebf4;
 }
 .obj_article_details .authors ul.authors li .name,
 .obj_article_details .authors_list ul.authors li .name {
@@ -4226,6 +4227,8 @@ a:hover, a:focus, a:active {
   background-size: 22px;
   display: block;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
 }
 .obj_article_details .citation .citation_display > .label {
   font-size: 1.25rem;
