@@ -4185,24 +4185,6 @@ a:hover, a:focus, a:active {
   padding: 2rem;
   border: 1px solid #e7ebf4;
 }
-.obj_article_details .galleys {
-  margin-top: 1rem;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-.obj_article_details .galleys .galleys_links > li .obj_galley_link {
-  font-size: 0.9375rem;
-  background-color: #59b893;
-  color: #fff;
-  border: 1px solid #59b893;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-.obj_article_details .galleys .galleys_links > li .obj_galley_link:hover, .obj_article_details .galleys .galleys_links > li .obj_galley_link:focus, .obj_article_details .galleys .galleys_links > li .obj_galley_link:active {
-  color: #fff;
-  background: #101921;
-  border-bottom: 1px solid #101921;
-}
 .obj_article_details .authors .label,
 .obj_article_details .authors_list .label {
   display: inline-block;
