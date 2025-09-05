@@ -22,7 +22,7 @@
 
 <div class="page page_contact">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.contact"}
-	<h1>
+	<h1 class="page_title">
 		{translate key="about.contact"}
 	</h1>
 	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="contact" sectionTitleKey="about.contact"}
