@@ -12,15 +12,18 @@
 {include file="frontend/components/header.tpl" pageTitle="announcement.announcements"}
 
 <div class="page page_announcements">
-	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="announcement.announcements"}
-	<h1>
-		{translate key="announcement.announcements"}
-	</h1>
-	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="announcements" anchor="announcements" sectionTitleKey="announcement.announcements"}
+	<div class="container">
 
-	{$announcementsIntroduction}
+		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="announcement.announcements"}
+		<h1 class="page_title">
+			{translate key="announcement.announcements"}
+		</h1>
+		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="announcements" anchor="announcements" sectionTitleKey="announcement.announcements"}
 
-	{include file="frontend/components/announcements.tpl"}
+		{$announcementsIntroduction}
+
+		{include file="frontend/components/announcements.tpl"}
+	</div>
 </div><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}
