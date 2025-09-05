@@ -9,11 +9,17 @@
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$title}
 
-{include file="frontend/components/breadcrumbs.tpl" currentTitle=$title}
 
 <div class="page">
-	<h1 class="page_title">{$title|escape}</h1>
-	{$content}
+	<div class="container">
+		{include file="frontend/components/breadcrumbs.tpl" currentTitle=$title}
+
+		<h1 class="page_title">{$title|escape}</h1>
+
+		<div class="description">
+			{$content}
+		</div>
+	</div>
 </div>
 
 {include file="frontend/components/footer.tpl"}
