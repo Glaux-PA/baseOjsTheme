@@ -3944,11 +3944,6 @@ a:hover, a:focus, a:active {
           flex: 1 1 auto;
 }
 
-.obj_issue_toc .heading .title-g, .obj_issue_toc .heading .title {
-  font-size: 1.75rem;
-  font-weight: 600;
-  margin-top: 1rem;
-}
 .obj_issue_toc .heading .current_issue_title {
   font-size: 1.25rem;
   font-weight: 400;
@@ -4442,28 +4437,6 @@ a:hover, a:focus, a:active {
 }
 .search_results > li {
   margin-bottom: 2rem;
-}
-
-.issue_keywords_block {
-  margin-top: 2rem;
-  padding: 2rem;
-  background: #59b893;
-}
-.issue_keywords_block .title {
-  font-size: 1.5rem;
-  color: #fff;
-  font-family: "Work Sans", sans-serif;
-}
-.issue_keywords_block .keywords-list {
-  padding-left: 0;
-  list-style: none;
-}
-.issue_keywords_block .keywords-list li a {
-  color: #fff;
-  text-decoration: none;
-}
-.issue_keywords_block .keywords-list li a:hover, .issue_keywords_block .keywords-list li a:focus, .issue_keywords_block .keywords-list li a:active {
-  opacity: 0.5;
 }
 
 .pkp_block {
@@ -4962,13 +4935,10 @@ a:hover, a:focus, a:active {
   cursor: pointer;
 }
 
-.page_issue .page-title {
+.page_issue .page_title {
   color: #fff;
   font-size: 2rem;
   line-height: 1.25;
-}
-.page_issue .issue_keywords_block {
-  margin-top: 4rem;
 }
 .page_issue .heading {
   padding-top: 1rem;
@@ -5017,7 +4987,7 @@ a:hover, a:focus, a:active {
 .page_issue_archive {
   padding-bottom: 4rem;
 }
-.page_issue_archive .page-title {
+.page_issue_archive .page_title {
   margin-bottom: 2rem;
   font-size: 2rem;
   line-height: 1.25;
