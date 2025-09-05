@@ -11,22 +11,27 @@
 {include file="frontend/components/header.tpl"}
 
 <div class="page page_message">
-	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey=$pageTitle}
-	<h1>
-		{translate key=$pageTitle}
-	</h1>
-	<div class="description">
-		{if $messageTranslated}
-			{$messageTranslated}
-		{else}
-			{translate key=$message}
+	<div class="container">
+
+		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey=$pageTitle}
+		
+		<h1 class="page_title">
+			{translate key=$pageTitle}
+		</h1>
+		
+		<div class="description">
+			{if $messageTranslated}
+				{$messageTranslated}
+			{else}
+				{translate key=$message}
+			{/if}
+		</div>
+		{if $backLink}
+			<div class="cmp_back_link">
+				<a href="{$backLink}">{translate key=$backLinkLabel}</a>
+			</div>
 		{/if}
 	</div>
-	{if $backLink}
-		<div class="cmp_back_link">
-			<a href="{$backLink}">{translate key=$backLinkLabel}</a>
-		</div>
-	{/if}
 </div>
 
 {include file="frontend/components/footer.tpl"}
