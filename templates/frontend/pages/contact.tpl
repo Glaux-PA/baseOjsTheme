@@ -31,12 +31,6 @@
 		{* Contact section *}
 		<div class="contact_section">
 
-			{if $mailingAddress}
-				<div class="address">
-					{$mailingAddress|nl2br|strip_unsafe_html}
-				</div>
-			{/if}
-
 			{* Primary contact *}
 			{if $contactTitle || $contactName || $contactAffiliation || $contactPhone || $contactEmail}
 				<div class="contact primary">
@@ -78,6 +72,13 @@
 						{mailto address=$contactEmail encode='javascript'}
 					</div>
 					{/if}
+
+					{if $mailingAddress}
+						<div class="address">
+							{$mailingAddress|nl2br|strip_unsafe_html}
+						</div>
+					{/if}
+
 				</div>
 			{/if}
 
