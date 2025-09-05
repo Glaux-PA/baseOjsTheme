@@ -56,7 +56,7 @@
 				</div>
 
 			<div class="col-md-7 offset-md-1"> 
-					<h1 class="page-title">
+					<h1 class="page_title">
 						{$issueIdentification|escape}
 					</h1>
 
