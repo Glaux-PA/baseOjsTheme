@@ -13,13 +13,15 @@
 {include file="frontend/components/header.tpl" pageTitle="about.aboutContext"}
 
 <div class="page page_about">
-	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutContext"}
-	<h1>
-		{translate key="about.aboutContext"}
-	</h1>
-	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
+	<div class="container">
+		{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.aboutContext"}
+		<h1 class="page_title">
+			{translate key="about.aboutContext"}
+		</h1>
+		{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.aboutContext"}
 
-	{$currentContext->getLocalizedData('about')}
+		{$currentContext->getLocalizedData('about')}
+	</div>
 </div><!-- .page -->
 
 {include file="frontend/components/footer.tpl"}
