@@ -5041,9 +5041,6 @@ a:hover, a:focus, a:active {
     width: 47%;
   }
 }
-.page_contact .btn {
-  margin-bottom: 1rem;
-}
 
 .page_article_html_G .sidebar-container.sidebar-collapsed {
   display: none !important;
@@ -5081,7 +5078,7 @@ a:hover, a:focus, a:active {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.page_information .title_text_block_G {
+.page_information .title-text-block {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -5093,7 +5090,7 @@ a:hover, a:focus, a:active {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.page_editorial_team .title_text_block_G {
+.page_editorial_team .title-text-block {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -5102,6 +5099,11 @@ a:hover, a:focus, a:active {
 }
 
 .page_about .page_title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page_contact .page_title {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
